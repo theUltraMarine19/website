@@ -399,7 +399,7 @@
       <table width="100%" align="center" border="0" cellspacing="0" cellpadding="20">
               <tr>
                 <td>
-                  <heading style="font-size:22px">Course Projects</heading>
+                  <heading style="font-size:22px">Key Projects</heading>
                 </td>
               </tr>
 
@@ -456,7 +456,7 @@
                       </td>
                     </tr>
 
-                    <tr >
+            <tr >
                 <td width="30%"><img id="img-pgp" src="images/OCaml.png" alt="project_img" width="160" style="border-style: none">
                     </td>
         
@@ -484,6 +484,23 @@
                         <p style="text-align:justify">
                         We designed a <i>freetext search engine</i> supporting both phrasal and boolean queries, leveraging NLTK to retrieve and rank legal case judgments. We finished <b>2nd out of 33 teams</b> on the leaderboard based on the assignment given by the Singapore-based legal intelligence firm, Intellex. <b>Positional indices</b> were implemented to aid <i>proximity search</i> with additional <b>zone</b> and <b>field indices</b> like court hierarchy, legal case dates to aid in retrieval. We were able to get a high <b>F1</b> score using various query expansion techniques like <b>pseudo relevance feedback</b> using the <i>Rochhio algorithm, WordNet synonyms</i> and <i>co-occurence thesaurus</i> generated from the corpus dictionary. We used the LNC model of tf-idf for freetext search <br>
                           <br><a href="https://github.com/theUltraMarine19/CS3245-IR_HW4">Github repo</a>
+                        </p>
+                      </td>
+                    </tr>
+
+              <tr >
+                <td width="30%"><img id="img-pgp" src="images/monad.png" alt="project_img" width="160" style="border-style: none">
+                    </td>
+        
+                      <td valign="top" width="70%">
+                        <p>
+          <papertitle>Figaro : A Probabilistic Programming Language</papertitle><br>
+                          <em>Supervisor: <a href="https://www.linkedin.com/in/razvan-voicu-89061711/?originalSubdomain=sg">Prof. Razvan Voicu</a> & <a href="https://www.comp.nus.edu.sg/cs/bio/chinwn/">Prof. Chin Wei Ngan</a>, National University of Singapore</em> <br>
+
+                        <p style="text-align:justify">
+                        Explored the Probabilistic Programming <b>Monad</b> in Figaro, which combines the object-oriented paradigm with the functional programming paradigm in Scala. Modeled real-life problems using <i>Bayesian Networks</i> with inference algorithms like <b>Variable Elimination, Belief Propagation</b> and <b>Dynamic Reasoning algorithms</b> like Factored Frontier. Simulated a simple market model using Decision Models to calculate the optimal policy. Extended the language by implementing a new <b>Element class</b> to model the distribution of the <i>maximum value</i> of a random variable, sampled from 0 to a given upper bound <br>
+                          <br><a href="data/PLproj.pdf">Report</a> | <a href="https://docs.google.com/presentation/d/1LxuZQtcmuJNyyMRXIvCr0rUyv_sVZ0KJBW4yRTItnug/edit">Presentation</a> | <a href="https://github.com/theUltraMarine19/CS4215-PL_proj">Github repo</a>
+                        <!-- <li>Implemented the above insights on <i>pointer-generator framework</i> and submitted a <b>patent application (P8322-US)</b> for the same<br> -->
                         </p>
                       </td>
                     </tr>
@@ -535,6 +552,160 @@
                       </td>
                     </tr>
 
+            <table width="100%" align="center" border="0" cellspacing="0" cellpadding="20">
+              <tr>
+                <td>
+                  <heading style="font-size:22px">Other Projects</heading>
+                </td>
+              </tr>
+
+              <tr >
+                <td valign="top" width="50%">
+                        <p>
+          <papertitle>PokeDB : A Pokemon RPG Game</papertitle><br>
+                          <em>Supervisor: <a href="https://www.cse.iitb.ac.in/~sudarsha/">Prof. S Sudarshan</a>, Indian Institute of Technology, Bombay</em> <br>
+
+                        <p style="text-align:justify">
+                          <!-- Advanced Operating Systems -->
+                        <!-- <br><br> -->
+                        <!-- <ul style="list-style-type:circle;"> -->
+                        We built a multiplayer Pokemon game on <b>PostgreSQL</b> backend with <i>JDBC API</i> from pokeAPI JSON data with over 14,000 tuples. Online gym battles, navigable maps with probability models for capturing wild pokemon and evolution of pokemon with battle experience were also added
+                          <br><br><a href="https://docs.google.com/document/d/11Q_0gd_yZbGlOSAQ3Vawj10TYQvelemXKHa2Yy1SE5Q/edit?usp=sharing">Report</a> 
+                        </p>
+                      </td>
+        
+                      <td valign="top" width="50%">
+                        <p>
+          <papertitle>Feed'er : An All-purpose Academic App</papertitle><br>
+                          <em>Supervisor: <a href="https://www.cse.iitb.ac.in/~sharat/">Prof. Sharat Chandran</a>, Indian Institute of Technology, Bombay</em> <br>
+
+                        <p style="text-align:justify">
+                          <!-- Advanced Operating Systems -->
+                        <!-- <br><br> -->
+                        <!-- <ul style="list-style-type:circle;"> -->
+                        Developed an integrated <i>Android</i> and <i>Django</i> based web app for displaying submission deadlines, exam dates and other important reminders via <b>push-notifications</b>. Implemented automatic sync and signup with social logins, with security measures against <b>XSS, CSRF</b> etc
+                          <br><br><a href="data/ReportProject.pdf">User Manual</a> | <a href="data/PresentationProject.pdf">Presentation</a>
+                        </p>
+                      </td>
+                    </tr>
+
+              <tr >
+                <td valign="top" width="50%">
+                        <p>
+          <papertitle>Sudoku GamePlay Software</papertitle><br>
+                          <em>Supervisor: <a href="https://www.cse.iitb.ac.in/~as/">Prof. Amitabha Sanyal</a>, Indian Institute of Technology, Bombay</em> <br>
+
+                        <p style="text-align:justify">
+                          <!-- Advanced Operating Systems -->
+                        <!-- <br><br> -->
+                        <!-- <ul style="list-style-type:circle;"> -->
+                        Built a GUI based solver on <b>MIT Scheme</b> with features like <i>Undo, Auto-solve</i>, and filters for seeding games of varying difficulty levels. Employed <b>backtracking algorithm</b> to solve any given initial configuration
+                          <br><br><a href="https://docs.google.com/document/d/1o-EPTKYdRmXdH0dR8ulbIjr44BnkDTCBxjZWpJUgJ78/edit?usp=sharing">Report</a> 
+                        </p>
+                      </td>
+        
+                      <td valign="top" width="50%">
+                        <p>
+          <papertitle>Ldap Authenticated Chat Application</papertitle><br>
+                          <em>Supervisor: <a href="https://www.cse.iitb.ac.in/~varsha/">Prof. Varsha Apte</a>, Indian Institute of Technology, Bombay</em> <br>
+
+                        <p style="text-align:justify">
+                          <!-- Advanced Operating Systems -->
+                        <!-- <br><br> -->
+                        <!-- <ul style="list-style-type:circle;"> -->
+                        A <b>server-client model</b> with <i>X11 based GUI</i> was developed using <b>Socket programming</b>, with <i>LDAP Authentication</i> using openLDAP. Additional functionality for group chats, offline inbox via hashmaps and multimedia message exchanges were also supported
+                        </p>
+                      </td>
+                    </tr>
+
+
+          <tr >
+                <td valign="top" width="50%">
+                        <p>
+          <papertitle>Ethernet-enabled ATM Controller</papertitle><br>
+                          <em>Supervisor: <a href="https://www.cse.iitb.ac.in/~supratik/">Prof. Supratik Chakraborty</a>, Indian Institute of Technology, Bombay</em> <br>
+
+                        <p style="text-align:justify">
+                          <!-- Advanced Operating Systems -->
+                        <!-- <br><br> -->
+                        <!-- <ul style="list-style-type:circle;"> -->
+                        Developed an <b>ethernet-enabled FPGA module</b> on VHDL to dispense cash leveraging <i>greedy algorithm</i> in Xilinx ISE, with <b>Tiny Encryption algorithm</b> to provide secure exchange of user data. Enforced insufficient balance, incorrect pin using LED displays, and frontend caching to protect against server crashes
+                      </p>
+                      </td>
+        
+                      <td valign="top" width="50%">
+                        <p>
+          <papertitle>Text Processor</papertitle><br>
+                          <em>Supervisor: <a href="https://www.cse.iitb.ac.in/~varsha/">Prof. Varsha Apte</a>, Indian Institute of Technology, Bombay</em> <br>
+
+                        <p style="text-align:justify">
+                          <!-- Advanced Operating Systems -->
+                        <!-- <br><br> -->
+                        <!-- <ul style="list-style-type:circle;"> -->
+                        Built a class for enumeration of characters, words with support for Find and Replace using <b>Knuth Morris Pratt algorithm</b>, regular expressions, <b>LZW compression</b> and encryption and decryption via <i>Caesar cipher</i>
+                        </p>
+                      </td>
+                    </tr>
+
+            <tr >
+                <td valign="top" width="50%">
+                        <p>
+          <papertitle>Movie Recommendation Engine</papertitle><br>
+                          <em>Supervisor: <a href="https://www.cse.iitb.ac.in/~sharat/">Prof. Sharat Chandran</a>, Indian Institute of Technology, Bombay</em> <br>
+
+                        <p style="text-align:justify">
+                          <!-- Advanced Operating Systems -->
+                        <!-- <br><br> -->
+                        <!-- <ul style="list-style-type:circle;"> -->
+                        Designed a python program for generating correlation between the user and critic rating based on Euclidean distances. Using the critic ratings, generated a list of recommended movies for the user sorted according to ratings weighted by <b>Pearson correlation coefficient</b> calculated using similarity between user and critic's rating
+                      </p>
+                      </td>
+        
+                      <td valign="top" width="50%">
+                        <p>
+          <papertitle>Simulation of Rube Goldberg Model</papertitle><br>
+                          <em>Supervisor: <a href="https://www.cse.iitb.ac.in/~sharat/">Prof. Sharat Chandran</a>, Indian Institute of Technology, Bombay</em> <br>
+
+
+                        <p style="text-align:justify">
+                          <!-- Advanced Operating Systems -->
+                        <!-- <br><br> -->
+                        <!-- <ul style="list-style-type:circle;"> -->
+                        Designed and simulated a <b>Rube Goldberg Machine</b> using <i>Box2D</i>, a physics simulation engine in C++, which involves compilation and linking to libraries like GLUI (GLUT based C++ user interface library). Designed a <b>Star Wars arena</b> by rendering attraction, repulsion among magnetic objects
+                        </p>
+                      </td>
+                    </tr>
+
+            <tr >
+                <td valign="top" width="50%">
+                        <p>
+          <papertitle>Body Fat Estimation</papertitle><br>
+                          <em>Supervisor: <a href="https://www.stat.nus.edu.sg/~stacym/">Prof. Chan Yiu Man</a>, National University of Singapore</em> <br>
+
+                        <p style="text-align:justify">
+                          <!-- Advanced Operating Systems -->
+                        <!-- <br><br> -->
+                        <!-- <ul style="list-style-type:circle;"> -->
+                        Estimated body fat mass using <b>stepwise regression</b> with statistical tests to check for <b>multicollinearity, lack of fit, outliers</b> and influential points derived from <b>cook's distance, dffits, dfbetas, studentised residuals</b> implemented in R. The same was validated with <b>partial F-test</b> for the significance of model and <b>Durbin-Watson test</b> with <b>Kolmogorov-Smirnov test</b> for testing the independence and normality of residuals
+                          <br><br><a href="data/ST3131_Report.pdf">Report</a> 
+                        </p>
+                      </td>
+        
+                      <td valign="top" width="50%">
+                        <p>
+          <papertitle>A Study of Statistical Tests and Sampling Algorithms</papertitle><br>
+                          <em>Supervisor: <a href="http://www.math.iitb.ac.in/~radhe/">Prof. Radhendushka Srivastava</a>, Indian Institute of Technology, Bombay</em> <br>
+
+
+                        <p style="text-align:justify">
+                          <!-- Advanced Operating Systems -->
+                        <!-- <br><br> -->
+                        <!-- <ul style="list-style-type:circle;"> -->
+                        Performed a critical study and simulation of the <b>Random Excursions test</b> and the famous sampling algorithm, <b>Metropolis Hastings Algorithm</b>
+                          <br><br><a href="https://docs.google.com/document/d/19KpWyJs8l_xg-lMzvlH4_ZEqWgGXRLtbt_8F0Hqkz5E/edit?usp=sharing">Random Excursions Report</a> | <a href="https://docs.google.com/document/d/1IN2tiAVSD4Ntj4ixg9qxJIsq8qArXHpIjStFPHQvuyc/edit?usp=sharing">Metropolis Hastings Algorithm Report</a>
+                        </p>
+                      </td>
+                    </tr> 
                     
 
 
