@@ -257,7 +257,7 @@
             <p style="text-align:justify"><b>VPP</b> and <b>Open vSwitch</b> are currently the fastest <i>DPDK-based</i> software switches out there. The aim was to determine the minimal resources required for optimal performance of a switch for different use cases
             <br><br>
             <ul style="list-style-type:circle;">
-            <li>Tested <b>latency, throughput, efficiency in terms of cycles per packet</b> with <i>increasing cores, routing table entries</i> and <i>hierarchical cache sizes</i> using uniform and skewed Gaussian traffic loads of 10 Gbps generated with <i>DPDK-based packet generator MoonGen</i>
+            <li>Tested <b>latency, throughput, efficiency in terms of cycles per packet</b> with <i>increasing cores, routing table entries</i> and <i>hierarchical cache sizes</i> using uniform and skewed Gaussian traffic loads of 10 Gbps generated with DPDK-based packet generator <i>MoonGen</i>
             <li>Analyzed VPP's <b>batch packet processing paradigm</b> and tested batch size as a function of different parameters <br>
             <li>Studied <b>Cisco Express Forwarding</b> implemented using <i>multiway prefix trees</i> in VPP, patented by Cisco <br>
             <br><br>
@@ -305,7 +305,7 @@
                         <p style="text-align:justify"><b>Hardware Acceleration of Proxies</b>
                         <br><br>
                         <ul style="list-style-type:circle;">
-                        <li>Tha aim was to decrease the latency incurred at the level of proxies which mostly run as host-based processes<br>
+                        <li>The aim was to decrease the latency incurred at the level of proxies which mostly run as host-based processes<br>
                         <li>Worked on <i>Layer 4</i> and <i>Layer 7</i> load balancing of different proxies like <b>Envoy, Nginx & HAproxy</b> to demarcate functionalities for host and SmartNIC offloading  <br>
                         <li>Performed benchmarking experiments using <b>wrk2</b> to determine feasibility of <b>SSL certificate verification</b> offloading and scalability, with a detailed study of Envoy worker threads <br>
                         </p>
@@ -375,7 +375,7 @@
                       </td>
                     </tr>
 
-                    <tr >
+              <tr >
                 <td width="30%"><img id="img-pgp" src="images/timetable.jfif" alt="project_img" width="160" style="border-style: none">
                     </td>
         
@@ -389,7 +389,148 @@
                         <ul style="list-style-type:circle;">
                         <li>Designed a scheduling algorithm leveraging <b>genetic algorithms</b> to generate the best fit optimal timetable for institutions <br>
                         <li>Added live sync to <b>MySQL database</b> on <i>PHP</i> to track occurrence of classes, and course adjustments <br>
+                        <li>Employed <b>Gale-Shapley algorithm</b> for alloting time slot priorities to students and professors
                           <br><a href="data/OliveSync.pdf">Brief Report</a>
+                        </p>
+                      </td>
+                    </tr>
+
+
+      <table width="100%" align="center" border="0" cellspacing="0" cellpadding="20">
+              <tr>
+                <td>
+                  <heading style="font-size:22px">Course Projects</heading>
+                </td>
+              </tr>
+
+              <tr >
+                <td width="30%"><img id="img-pgp" src="images/fuzz.jpg" alt="project_img" width="160" style="border-style: none">
+                    </td>
+        
+                      <td valign="top" width="70%">
+                        <p>
+          <papertitle>A Detailed Study and Comparison of General-Purpose Fuzzers </papertitle><br>
+                          <em>Supervisor: <a href="http://pages.cs.wisc.edu/~bart/">Prof. Barton Miller</a>, University of Wisconsin-Madison</em> <br>
+
+                        <p style="text-align:justify">
+                          <!-- Advanced Operating Systems -->
+                        <!-- <br><br> -->
+                        <!-- <ul style="list-style-type:circle;"> -->
+                        We made a comparison of general-purpose <i>mutation-based grey-box</i> fuzzers like <b>libFuzzer, American Fuzzy Lop (AFL)</b> and <b>honggfuzz</b> and evaluated their performance on the <i>Google fuzzer-test-suite</i> across 24 applications on metrics like <b>code coverage (basic blocks and edges)</b> and <b>bug-finding capabilities</b>. We found a new unreported bug in <b>pcre2-10.0</b> with the key finding that <i>only</i> libFuzzer can find <b>memory leaks</b> with the help of <i>LeakSanitizer</i>. Also proposed a new framework for <b>ensemble fuzzing</b> which uses different base fuzzers in tandem
+                          <br><br><a href="data/736.pdf">Brief Report</a> | <a href="data/fuzz_poster.tif">Poster</a>
+                        </p>
+                      </td>
+                    </tr>
+
+              <tr >
+                <td width="30%"><img id="img-pgp" src="images/vision.png" alt="project_img" width="160" style="border-style: none">
+                    </td>
+        
+                      <td valign="top" width="70%">
+                        <p>
+          <papertitle>Stereo Image Reconstruction using Energy Minimization</papertitle><br>
+                          <em>Supervisor: <a href="https://www.ece.nus.edu.sg/stfpage/eleclf/">Prof. Cheong Loong Fah</a> & <a href="https://sites.google.com/site/jshfeng/">Prof. Feng Jiashi</a>, National University of Singapore</em> <br>
+
+                        <p style="text-align:justify">
+                          <!-- Computer Vision -->
+                        <!-- <br><br> -->
+                       I implemented <b>normalized graphcuts</b> with &alpha;-expansion for image segmentation and denoising using <i>multilabel 8-connected Markov Random Fields</i>, and compared the same with <b>mean-shift algorithm</b>. I employed the <b>PatchMatch algorithm</b> to establish patch correspondences, for better alignment for <i>homography</i>. The other component involved obtaining <b>dense correspondences</b> from two images belonging to different viewpoints using manual methods and <i>KLT tracker</i>, to estimate the <b>Fundamental Matrix</b> using the <b>8-point algorithm</b><br>
+                          <br><a href="https://docs.google.com/document/d/1rsjQjSVagmr4zTYDpEzUer35-lKNfTa8xvlYa9m9usI/edit">Component 1 Report</a> | <a href="https://docs.google.com/document/d/1ckWtll-Xyut9CdcoBggvUJeOkRem4eE7HQ_xuKqqmnc/edit">Component 2 Report</a>
+                        </p>
+                      </td>
+                    </tr>
+
+                    <tr >
+                <td width="30%"><img id="img-pgp" src="images/Tetris.jpg" alt="project_img" width="160" style="border-style: none">
+                    </td>
+        
+                      <td valign="top" width="70%">
+                        <p>
+          <papertitle>Tetrisbot</papertitle><br>
+                          <em>Supervisor: <a href="https://www.comp.nus.edu.sg/~zick/">Prof. Zick Yair</a>, National University of Singapore</em> <br>
+
+                        <p style="text-align:justify">
+                        We designed a <i>utility-based agent</i> based on <b>genetic algorithms</b>, using a set of 10 <i>state-dependent</i> features like numer of holes, height differences between adjacent columns, max height of a column, etc. We used the <b>single-point crossing over</b> heuristic and implemented a multithreaded training approach random independent block sequences in parallel. <b>Particle swarm optimization</b> was also employed along with this for optimal convergence of weights to add an exploratory component. We achieved a maximum of <b>over 856,000</b> cleared rows. Additionally, we implemented an <b>auto-encoder</b> approach with <b>Q-learning</b> for a low dimensional game state representation. Though not quite successful with Tetris, we demonstrated a simple game "Catch the Ball" with the above approach to demonstrate its effectiveness  <br>
+                        <br><a href="data/Tetris.pdf">Report</a> | <a href="https://github.com/nifunk/TetrisPros">Github repo</a> | <a href="data/CL603.pdf">A study of genetic algorithms</a>
+                        </p>
+                      </td>
+                    </tr>
+
+                    <tr >
+                <td width="30%"><img id="img-pgp" src="images/OCaml.png" alt="project_img" width="160" style="border-style: none">
+                    </td>
+        
+                      <td valign="top" width="70%">
+                        <p>
+          <papertitle>A Java-like Compiler for OCaml</papertitle><br>
+                          <em>Supervisor: <a href="https://www.linkedin.com/in/razvan-voicu-89061711/?originalSubdomain=sg">Prof. Razvan Voicu</a> & <a href="https://www.comp.nus.edu.sg/cs/bio/chinwn/">Prof. Chin Wei Ngan</a>, National University of Singapore</em> <br>
+
+                        <p style="text-align:justify">
+                        I designed an <b>abstract syntax tree</b> comprising unary and binary operations, conditionals, functions, recursive functions, applications and let constructs on boolean and integer data types for the compiler, utilizing the <b>Gram parser</b> for parsing the instructions. I implemented a <b>virtual machine instruction interpreter</b> utilizing an operand stack with associated instructions to act upon it. I used the <i>type-checking</i> system with <b>Hindley Milner type inference</b> system with support for optional data types. The compiler was further optimized to leverage <b>tail recursion</b> and <i>contiguous stack frames</i> 
+                        <!-- <li>Implemented the above insights on <i>pointer-generator framework</i> and submitted a <b>patent application (P8322-US)</b> for the same<br> -->
+                        </p>
+                      </td>
+                    </tr>
+
+              <tr >
+                <td width="30%"><img id="img-pgp" src="images/ir.png" alt="project_img" width="160" style="border-style: none">
+                    </td>
+        
+                      <td valign="top" width="70%">
+                        <p>
+          <papertitle>Legal Case Retrieval System</papertitle><br>
+                          <em>Supervisor: <a href="https://www.comp.nus.edu.sg/~zhaojin/">Prof. Zhao Jin</a>, National University of Singapore</em> <br>
+
+                        <p style="text-align:justify">
+                        We designed a <i>freetext search engine</i> supporting both phrasal and boolean queries, leveraging NLTK to retrieve and rank legal case judgments. We finished <b>2nd out of 33 teams</b> on the leaderboard based on the assignment given by the Singapore-based legal intelligence firm, Intellex. <b>Positional indices</b> were implemented to aid <i>proximity search</i> with additional <b>zone</b> and <b>field indices</b> like court hierarchy, legal case dates to aid in retrieval. We were able to get a high <b>F1</b> score using various query expansion techniques like <b>pseudo relevance feedback</b> using the <i>Rochhio algorithm, WordNet synonyms</i> and <i>co-occurence thesaurus</i> generated from the corpus dictionary. We used the LNC model of tf-idf for freetext search <br>
+                          <br><a href="https://github.com/theUltraMarine19/CS3245-IR_HW4">Github repo</a>
+                        </p>
+                      </td>
+                    </tr>
+
+              <tr >
+                <td width="30%"><img id="img-pgp" src="images/GAN.png" alt="project_img" width="160" style="border-style: none">
+                    </td>
+        
+                      <td valign="top" width="70%">
+                        <p>
+          <papertitle>Generation of Nintendo Entertainment System Game layouts</papertitle><br>
+                          <em>Supervisor: <a href="https://www.cse.iitb.ac.in/~ganesh/">Prof. Ganesh Ramakrishnan</a>, Indian Institute of Technology Bombay</em> <br>
+
+                        <p style="text-align:justify">
+                        We built a <b>Deep Convolutional GAN</b> model on pytorch for generating new game levels, i.e. tile sheets from previous game layouts. We used <i>Leaky ReLU</i> as the activation function for both the discriminator and generator with the <b>Adam Optimizer</b> for <i>stochastic gradient descent</i> <br>
+                          <br><a href="https://docs.google.com/presentation/d/1VcxVu_zcHp-nVjE4j7FZg7rJjuZUVmM-hdkettTNiow/edit">Brief Presentation</a>
+                        </p>
+                      </td>
+                    </tr>
+
+              <tr >
+                <td width="30%"><img id="img-pgp" src="images/texture.png" alt="project_img" width="160" style="border-style: none">
+                    </td>
+        
+                      <td valign="top" width="70%">
+                        <p>
+          <papertitle>Image Quilting for Texture Synthesis and Transfer</papertitle><br>
+                          <em>Supervisor: <a href="https://www.cse.iitb.ac.in/~suyash/">Prof. Suyash Awate</a> & <a href="https://www.cse.iitb.ac.in/~ajitvr/">Prof. Ajit Rajwade</a>, Indian Institute of Technology Bombay</em> <br>
+
+                        <p style="text-align:justify">
+                        We employed the <b>Efros & Leung algorithm</b> to synthesize larger textures, and used the same algorithm with a modified cost function for <b>iterative texture transfer</b> to target images using <i>correspondence maps</i>. We also implemented the <b>minimal error boundary cut</b> using dynamic programming to avoid block-seam artifacts <br>
+                          <br><a href="https://docs.google.com/document/d/13iApa-1GJeB4qWwW_0t0PX78VXW_lcwOGM2VzDZdL3g/edit?usp=sharing">Report</a>
+                        </p>
+                      </td>
+                    </tr>
+
+              <tr >
+                <td width="30%"><img id="img-pgp" src="images/graphics.png" alt="project_img" width="160" style="border-style: none">
+                    </td>
+        
+                      <td valign="top" width="70%">
+                        <p>
+          <papertitle>OpenGL based 3D Animation Film</papertitle><br>
+                          <em>Supervisor: <a href="https://www.comp.nus.edu.sg/~hcheng/">Prof. Cheng Ho-lun Alan</a>, National University of Singapore</em> <br>
+
+                        <p style="text-align:justify">
+                        <i>Dynamic rendering techniques</i> were used to create this animation film, based on OpenGL's various timer functions. Different camera transformations were used like <b>dolly zoom</b> to add artistic effects. I used motion simulation along Bezier curves, adding soft shadows and transparency effects using <b>Ray tracing</b>. For object modeling, <b>Phong illumination</b> and <i>Phong shading</i> were used with <b>texture mapping</b> and <b>bump mapping</b> to mimic real-life surfaces
                         </p>
                       </td>
                     </tr>
