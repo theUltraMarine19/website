@@ -200,11 +200,31 @@
 
             <tr>
               <td>
-                <heading style="font-size:22px">Undergraduate Research Projects</heading>
+                <heading style="font-size:22px">Research Projects</heading>
               </td>
             </tr>
 
-                  
+      <tr >
+                <td width="30%"><img id="img-opt" src="images/D2R.png" alt="project_img" width="160" style="border-style: none">
+                </td>
+                  <td valign="top" width="70%">
+                    <p><a href="#">
+      <papertitle>Dataplane-Only Policy-Compliant Routing under Failures</papertitle></a><br>
+                      <em>Supervisor: <a href="http://pages.cs.wisc.edu/~akella/">Prof. Aditya Akella</a>, University of Wisconsin-Madison</em><br>
+                    <p style="text-align:justify">On <i>failures</i>, routers typically have <b>inconsistent state</b>, which leads to <b>high convergence</b> times. In such cases, the central software controller could be a bottleneck and finding <b>policy-compliant paths</b> is hard. We propose for computation of such paths in the data plane with a central policy plane across end-host interfaces 
+                    <br><br>
+                    <ul style="list-style-type:circle;">
+                    <li> Used <b>search algorithms</b> to compute routes in the data plane using <b>P4 stacks with recirculation</b> along with software emulation on <i>mininet</i> for the <i>RocketFuel</i> set of toplogies  <br>
+                    <li> Provided support for <b>Weighted Cost Multipath</b> load balancing with dynamic weights and <b>per-flow</b> and <b>per-session consistency guarantees</b>  <br>
+                    <li> Handled failures through register updates utilizing <b>Failure Carrying Packets</b> in <i>Tofino</i> <br>
+                    <li> Added support for policies like <b>middlebox chaining</b> and <b>hierarchical routing</b> to avoid excessive recirculations<br>
+                    <br><br>
+                    <a href="https://docs.google.com/presentation/d/1fx_alWVxjKbx81C7iGbDTKdBNSzI5xvNDd2LNp4CRwE/edit?usp=sharing">Slide Deck 1</a> | <a href="https://docs.google.com/presentation/d/1njGyaDvc56D4fUe-NAFiIQL5oxN8_yew5lL2b8SsG9M/edit?usp=sharing">Slide Deck 2</a></p>
+                  </td>
+                </tr>            
+            
+
+            <tr >            
       <tr >
                 <td width="30%"><img id="img-opt" src="images/dictionary.png" alt="project_img" width="160" style="border-style: none">
                 </td>
