@@ -132,23 +132,24 @@
             
 <!-- UPDATES -->
 
-        <!--     <table width="100%" align="center" border="0" cellspacing="0" cellpadding="20">
+            <table width="100%" align="center" border="0" cellspacing="0" cellpadding="20">
                   <tr>
               <td>
                 <heading style="font-size:22px">Updates</heading>
         </td>
                 </tr><tr>
         <td> <ul style="list-style-type:circle;">
+        <li>[Feb 2020] Incoming SDE Intern at Amazon Web Services, E. Palo Alto for Summer '20 </li>
         <li>[Jan 2020] Continuing with Teaching Assistantship at University of Wisconsin-Madison for CS 559 (Computer Graphics) in Spring'20 </li>
-        <li>[Aug 2019] Got Teaching Assistantship at University of Wisconsin-Madison for CS 559 (Computer Graphics) in Fall'19 </li>
-        <li>[Apr 2019] Declined admission acceptance offers from Cornell, UCSD and Georgia Tech</li>
-        <li>[Feb 2019] Accepted admit offer from University of Wisconsin-Madison </li>
+        <li>[Aug 2019] Received Teaching Assistantship at University of Wisconsin-Madison for CS 559 (Computer Graphics) in Fall'19 </li>
+        <!-- <li>[Apr 2019] Declined admission acceptance offers from Cornell, UCSD and Georgia Tech</li> -->
+        <li>[Feb 2019] Accepted admit offer from University of Wisconsin-Madison with special CS scholarship </li>
         </ul>
                 </td> 
               
       </tr>
             </table>
-       -->
+      
       
 <!-- COMPETITIONS -->     
            <table width="100%" align="center" border="0" cellspacing="0" cellpadding="20">
@@ -205,6 +206,27 @@
             </tr>
 
       <tr >
+                <td width="30%"><img id="img-opt" src="images/NIC.png" alt="project_img" width="160" style="border-style: none">
+                </td>
+                  <td valign="top" width="70%">
+                    <p><a href="#">
+      <papertitle>Adaptive SmartNIC-accelerated micro-load balancing</papertitle></a><br>
+                      <em>Supervisor: <a href="http://pages.cs.wisc.edu/~akella/">Prof. Aditya Akella</a>, University of Wisconsin-Madison</em><br>
+                    <p style="text-align:justify"> Given typical traffic dumps from network simulators, or mathematical simulations of network topologies with variation i queueing, sending rates, etc can aid in online learning of weights in an effort to load-balance outgoing traffic across severa outgoing links. We explore such approaches utilizing SmartNIC / P4 switch computations
+                    <br><br>
+                    <ul style="list-style-type:circle;">
+                    <li> Exploring the use of <i>RL-based actor-critic algorithms</i> in designing traffic matrices to perform in-network load balancing to ensure <b>max-min fairness</b> and <b>minimal queuing</b> for Clos data-center networks <br>
+                    <li> Implemented a <i>compressed neural network</i> version of the same on P4 switches with <b>weighted multi-path load balancing</b> <br>
+                    <li> Harnessing <i>SmartNIC-compute</i> power to move computation of weights to end-hosts to maintainline-rate processing at switches <br>
+                    <br> <br>
+                    <a href="https://docs.google.com/presentation/d/1jcZ3gCCg3zVnVxgHSwxWdkEk2LDRHEEOSP6ooMW3SFE/edit?usp=sharing">Slide Deck for P4 version</a> </p>
+                  </td>
+                </tr>            
+            
+
+            <tr >
+
+      <tr >
                 <td width="30%"><img id="img-opt" src="images/D2R.png" alt="project_img" width="160" style="border-style: none">
                 </td>
                   <td valign="top" width="70%">
@@ -214,12 +236,12 @@
                     <p style="text-align:justify">On <i>failures</i>, routers typically have <b>inconsistent state</b>, which leads to <b>high convergence</b> times. In such cases, the central software controller could be a bottleneck and finding <b>policy-compliant paths</b> is hard. We propose for computation of such paths in the data plane with a central policy plane across end-host interfaces 
                     <br><br>
                     <ul style="list-style-type:circle;">
-                    <li> Used <b>search algorithms</b> to compute routes in the data plane using <b>P4 stacks with recirculation</b> along with software emulation on <i>mininet</i> for the <i>RocketFuel</i> set of toplogies  <br>
-                    <li> Provided support for <b>Weighted Cost Multipath</b> load balancing with dynamic weights and <b>per-flow</b> and <b>per-session consistency guarantees</b>  <br>
-                    <li> Handled failures through register updates utilizing <b>Failure Carrying Packets</b> in <i>Tofino</i> <br>
-                    <li> Added support for policies like <b>middlebox chaining</b> and <b>hierarchical routing</b> to avoid excessive recirculations<br>
-                    <br><br>
-                    <a href="https://docs.google.com/presentation/d/1fx_alWVxjKbx81C7iGbDTKdBNSzI5xvNDd2LNp4CRwE/edit?usp=sharing">Slide Deck 1</a> | <a href="https://docs.google.com/presentation/d/1njGyaDvc56D4fUe-NAFiIQL5oxN8_yew5lL2b8SsG9M/edit?usp=sharing">Slide Deck 2</a></p>
+                    <li> Performed several experiments on <b>search algorithms</b> used to compute routes in the data plane using <b>P4 stacks and recirculation</b> using software emulation on <i>mininet</i> for the <i>RocketFuel</i> set of toplogies <br>
+                    <li> Analysed performance relative to other <b>latency-aware</b> routing algorithms to establish <i>stretch</i> as a function of number of links <br>
+                    <li> Provided support for <b>Weighted Cost Multipath</b> load balancing with dynamic weights on a <b>per-packet</b> basis <br>
+                    <li> Added per-session, per-flow and per-packet consistency using <b>register-caching</b> of policies to avoid excessive recirculations <br>
+                    <br> <br>
+                    <a href="https://docs.google.com/presentation/d/1fx_alWVxjKbx81C7iGbDTKdBNSzI5xvNDd2LNp4CRwE/edit?usp=sharing">Slide Deck 1</a> | <a href="https://docs.google.com/presentation/d/1njGyaDvc56D4fUe-NAFiIQL5oxN8_yew5lL2b8SsG9M/edit?usp=sharing">Slide Deck 2</a> | D2R preprint <a href="https://arxiv.org/pdf/1912.02402.pdf"></p>
                   </td>
                 </tr>            
             
@@ -422,6 +444,47 @@
                   <heading style="font-size:22px">Key Projects</heading>
                 </td>
               </tr>
+
+              <tr >
+                <td width="30%"><img id="img-pgp" src="images/CMS.png" alt="project_img" width="160" style="border-style: none">
+                    </td>
+        
+                      <td valign="top" width="70%">
+                        <p>
+          <papertitle>Count-Min Sketches for Flow-based Telemetry</papertitle><br>
+                          <em>Supervisor: <a href="http://pages.cs.wisc.edu/~akella/">Prof. Aditya Akella</a>, University of Wisconsin-Madison</em> <br>
+
+                        <p style="text-align:justify">
+                          <!-- Advanced Operating Systems -->
+                        <!-- <br><br> -->
+                        <!-- <ul style="list-style-type:circle;"> -->
+                        Recent <b>active queue length management</b> algorithms like QCN probe queue length to throttle sending rate across all senders. However, they do not aim to identify <i>contributing flows</i>. Here, we explore <b>Count-Min Sketches</b> which overcome <i>scalability issues of per-flow counters</i> and <i>dynamic allocation issues of hashmaps</i> to accurately record per-flow queue occupancy. Distributed across <b>snapshots</b> of specified time intervals, each snapshot utilizes a count-min sketch based on <b>register arrays</b> to track flows in that interval, while cleverly reutilizing them after a certain total packet count. We are testing our implementation on <i>mininet</i> with <b>ECN-based feedback notifications</b> to senders, thus utilizing <b>flow completion time</b> as a metric to demonstrate the effectiveness of this approach
+                          <br><br>
+                          <!-- <a href="data/736.pdf">Brief Report</a> | <a href="data/fuzz_poster.tif">Poster</a> -->
+                        </p>
+                      </td>
+                    </tr>
+
+
+              <tr >
+                <td width="30%"><img id="img-pgp" src="images/GPU.png" alt="project_img" width="160" style="border-style: none">
+                    </td>
+        
+                      <td valign="top" width="70%">
+                        <p>
+          <papertitle>Accelerating Image Segmentation with Parallel Computing </papertitle><br>
+                          <em>Supervisor: <a href="http://homepages.cae.wisc.edu/~negrut/">Prof. Dan Negrut</a>, University of Wisconsin-Madison</em> <br>
+
+                        <p style="text-align:justify">
+                          <!-- Advanced Operating Systems -->
+                        <!-- <br><br> -->
+                        <!-- <ul style="list-style-type:circle;"> -->
+                        <b>Image segmentation</b> is used in medical imaging for tumour detection, for tracing blood capillaries and hence blood flow while <i>image demosaicing</i> takes different cross sections/slices of tissue images and stitch them to get a coherent image. Here, we try to accelerate the process using <b>CUDA</b>, leveraging GPU and hybrid <b>OpenMP+MPI</b> approaches, leveraging multicores. We aim to demonstrate optimizations like <b>SIMD, loop unrolling, use of templates, forced inlining</b> along with use of <b>shared</b> and <b>unified</b> memory while exposing need of constructs like <i>atomic/critical</i> sections and <i>thread synchronization/barriers</i> through the implementation of <i>Sobel/Canny edge-detection</i> algorithms and the <i>Fuzzy C-Means</i> algorithm for segmentation   
+                          <br><br>
+                          <!-- <a href="data/736.pdf">Brief Report</a> | <a href="data/fuzz_poster.tif">Poster</a> -->
+                        </p>
+                      </td>
+                    </tr>
 
               <tr >
                 <td width="30%"><img id="img-pgp" src="images/fuzz.jpg" alt="project_img" width="160" style="border-style: none">
