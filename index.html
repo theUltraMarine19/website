@@ -139,9 +139,9 @@
         </td>
                 </tr><tr>
         <td> <ul style="list-style-type:circle;">
-        <li>[Feb 2020] Incoming SDE Intern at Amazon Web Services, E. Palo Alto for Summer '20 </li>
-        <li>[Jan 2020] Continuing with Teaching Assistantship at University of Wisconsin-Madison for CS 559 (Computer Graphics) in Spring'20 </li>
-        <li>[Aug 2019] Received Teaching Assistantship at University of Wisconsin-Madison for CS 559 (Computer Graphics) in Fall'19 </li>
+        <li>[Feb 2020] Incoming SDE Intern at <b>Amazon Web Services</b>, E. Palo Alto, CA for Summer '20 </li>
+        <li>[Jan 2020] Continuing with Teaching Assistantship at UW Madison for CS 559 (Computer Graphics) in Spring'20 </li>
+        <li>[Aug 2019] Received Teaching Assistantship at UW Madison for CS 559 (Computer Graphics) in Fall'19 </li>
         <!-- <li>[Apr 2019] Declined admission acceptance offers from Cornell, UCSD and Georgia Tech</li> -->
         <li>[Feb 2019] Accepted admit offer from University of Wisconsin-Madison with special CS scholarship </li>
         </ul>
@@ -212,12 +212,12 @@
                     <p><a href="#">
       <papertitle>Adaptive SmartNIC-accelerated micro-load balancing</papertitle></a><br>
                       <em>Supervisor: <a href="http://pages.cs.wisc.edu/~akella/">Prof. Aditya Akella</a>, University of Wisconsin-Madison</em><br>
-                    <p style="text-align:justify"> Given typical traffic dumps from network simulators, or mathematical simulations of network topologies with variation i queueing, sending rates, etc can aid in online learning of weights in an effort to load-balance outgoing traffic across severa outgoing links. We explore such approaches utilizing SmartNIC / P4 switch computations
+                    <p style="text-align:justify"> Given typical traffic trace dumps from network simulators, or mathematical simulations of network topologies with variation in queueing, sending rates, etc can aid in online learning of weights in an effort to load-balance traffic across several outgoing links. We explore such approaches utilizing SmartNIC / P4 switch computations
                     <br><br>
                     <ul style="list-style-type:circle;">
                     <li> Exploring the use of <i>RL-based actor-critic algorithms</i> in designing traffic matrices to perform in-network load balancing to ensure <b>max-min fairness</b> and <b>minimal queuing</b> for Clos data-center networks <br>
                     <li> Implemented a <i>compressed neural network</i> version of the same on P4 switches with <b>weighted multi-path load balancing</b> <br>
-                    <li> Harnessing <i>SmartNIC-compute</i> power to move computation of weights to end-hosts to maintainline-rate processing at switches <br>
+                    <li> Harnessing <i>SmartNIC-compute</i> power to move computation of weights to end-hosts to maintain line-rate processing at switches <br>
                     <br> <br>
                     <a href="https://docs.google.com/presentation/d/1jcZ3gCCg3zVnVxgHSwxWdkEk2LDRHEEOSP6ooMW3SFE/edit?usp=sharing">Slide Deck for P4 version</a> </p>
                   </td>
@@ -458,7 +458,7 @@
                           <!-- Advanced Operating Systems -->
                         <!-- <br><br> -->
                         <!-- <ul style="list-style-type:circle;"> -->
-                        Recent <b>active queue length management</b> algorithms like QCN probe queue length to throttle sending rate across all senders. However, they do not aim to identify <i>contributing flows</i>. Here, we explore <b>Count-Min Sketches</b> which overcome <i>scalability issues of per-flow counters</i> and <i>dynamic allocation issues of hashmaps</i> to accurately record per-flow queue occupancy. Distributed across <b>snapshots</b> of specified time intervals, each snapshot utilizes a count-min sketch based on <b>register arrays</b> to track flows in that interval, while cleverly reutilizing them after a certain total packet count. We are testing our implementation on <i>mininet</i> with <b>ECN-based feedback notifications</b> to senders, thus utilizing <b>flow completion time</b> as a metric to demonstrate the effectiveness of this approach
+                        Recent <b>active queue length management</b> algorithms like QCN probe queue length to throttle sending rate across all senders. However, they do not aim to identify <i>contributing flows</i>. Here, we explore <b>Count-Min Sketches</b> which overcome <i>scalability issues of per-flow counters</i> and <i>dynamic allocation issues of hashmaps</i> to accurately record per-flow queue occupancy. Distributed across <b>snapshots</b> of specified time intervals, each snapshot utilizes a count-min sketch based on <b>register arrays</b> to track flows in that interval, while cleverly re-utilizing them after a certain total packet count. We are testing our implementation on <i>mininet</i> with <b>ECN-based feedback notifications</b> to senders, thus utilizing <b>flow completion time</b> as a metric to demonstrate the effectiveness of this approach
                           <br><br>
                           <!-- <a href="data/736.pdf">Brief Report</a> | <a href="data/fuzz_poster.tif">Poster</a> -->
                         </p>
@@ -479,7 +479,7 @@
                           <!-- Advanced Operating Systems -->
                         <!-- <br><br> -->
                         <!-- <ul style="list-style-type:circle;"> -->
-                        <b>Image segmentation</b> is used in medical imaging for tumour detection, for tracing blood capillaries and hence blood flow while <i>image demosaicing</i> takes different cross sections/slices of tissue images and stitch them to get a coherent image. Here, we try to accelerate the process using <b>CUDA</b>, leveraging GPU and hybrid <b>OpenMP+MPI</b> approaches, leveraging multicores. We aim to demonstrate optimizations like <b>SIMD, loop unrolling, use of templates, forced inlining</b> along with use of <b>shared</b> and <b>unified</b> memory while exposing need of constructs like <i>atomic/critical</i> sections and <i>thread synchronization/barriers</i> through the implementation of <i>Sobel/Canny edge-detection</i> algorithms and the <i>Fuzzy C-Means</i> algorithm for segmentation   
+                        <b>Image segmentation</b> is used in medical imaging for tumour detection, for tracing blood capillaries and hence blood flow while <i>image demosaicing</i> takes different cross sections/slices of tissue images and stitches them to get a coherent image. Here, we try to accelerate the process using <b>CUDA</b>, leveraging GPU and hybrid <b>OpenMP+MPI</b> approaches, leveraging multicores. We aim to demonstrate optimizations like <b>SIMD, loop unrolling, use of templates, forced inlining</b> along with use of <b>shared</b> and <b>unified</b> memory, while exposing need of constructs like <i>atomic/critical</i> sections and <i>thread synchronization/barriers</i> through the implementation of <i>Sobel/Canny edge-detection</i> algorithms and the <i>Fuzzy C-Means</i> algorithm for segmentation   
                           <br><br>
                           <!-- <a href="data/736.pdf">Brief Report</a> | <a href="data/fuzz_poster.tif">Poster</a> -->
                         </p>
