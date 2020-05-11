@@ -451,16 +451,16 @@
         
                       <td valign="top" width="70%">
                         <p>
-          <papertitle>Count-Min Sketches for Flow-based Telemetry</papertitle><br>
+          <papertitle>Count-Min Sketches for Network Traffic Schedulingy</papertitle><br>
                           <em>Supervisor: <a href="http://pages.cs.wisc.edu/~akella/">Prof. Aditya Akella</a>, University of Wisconsin-Madison</em> <br>
 
                         <p style="text-align:justify">
                           <!-- Advanced Operating Systems -->
                         <!-- <br><br> -->
                         <!-- <ul style="list-style-type:circle;"> -->
-                        Recent <b>active queue length management</b> algorithms like QCN probe queue length to throttle sending rate across all senders. However, they do not aim to identify <i>contributing flows</i>. Here, we explore <b>Count-Min Sketches</b> which overcome <i>scalability issues of per-flow counters</i> and <i>dynamic allocation issues of hashmaps</i> to accurately record per-flow queue occupancy. Distributed across <b>snapshots</b> of specified time intervals, each snapshot utilizes a count-min sketch based on <b>register arrays</b> to track flows in that interval, while cleverly re-utilizing them after a certain total packet count. We are testing our implementation on <i>mininet</i> with <b>ECN-based feedback notifications</b> to senders, thus utilizing <b>flow completion time</b> as a metric to demonstrate the effectiveness of this approach
+                        Recent <b>active queue length management</b> algorithms like RED, ECN, CoDel probe queue length to throttle sending rate across all senders. However, they do not aim to identify <i>contributing flows</i> as the root cause of queue build-up. Here, I explored <b>Count-Min Sketches</b> which overcome <i>scalability issues of per-flow counters</i> and <i>dynamic allocation issues of hashmaps</i> to accurately record per-flow queue occupancy. Distributed across <b>snapshots</b> comprising a fixed number of packets (alternately, of specified time intervals), each snapshot utilizes a count-min sketch based on <b>register arrays in P4</b> to track flows in that interval, while cleverly reusing them after a certain total packet count. I tested my implementation on <i>mininet</i> with <b>ECN-based feedback notifications</b> to senders, thus utilizing <b>Flow Completion time</b> as a metric to demonstrate the effectiveness of this approach. I also used a C++ simulator with Pcapplusplus on <a href="http://pages.cs.wisc.edu/~tbenson/IMC10_Data.html">UW Data Center Measurement Trace</a> to evaluate <b>Precison</b> and <b>Recall</b> of the "contributing flow" classifier
                           <br><br>
-                          <!-- <a href="data/736.pdf">Brief Report</a> | <a href="data/fuzz_poster.tif">Poster</a> -->
+                          <a href="https://docs.google.com/document/d/1svl-XMEKbTolR0tbsrUSCrwvTanNf9sUq4Cwbn03bjc/edit?usp=sharing">Project Report</a> | <a href="https://github.com/theUltraMarine19/p4aqm">Github repo</a>
                         </p>
                       </td>
                     </tr>
@@ -479,9 +479,9 @@
                           <!-- Advanced Operating Systems -->
                         <!-- <br><br> -->
                         <!-- <ul style="list-style-type:circle;"> -->
-                        <b>Image segmentation</b> is used in medical imaging for tumour detection, for tracing blood capillaries and hence blood flow while <i>image demosaicing</i> takes different cross sections/slices of tissue images and stitches them to get a coherent image. Here, we try to accelerate the process using <b>CUDA</b>, leveraging GPU and hybrid <b>OpenMP+MPI</b> approaches, leveraging multicores. We aim to demonstrate optimizations like <b>SIMD, loop unrolling, use of templates, forced inlining</b> along with use of <b>shared</b> and <b>unified</b> memory, while exposing need of constructs like <i>atomic/critical</i> sections and <i>thread synchronization/barriers</i> through the implementation of <i>Sobel/Canny edge-detection</i> algorithms and the <i>Fuzzy C-Means</i> algorithm for segmentation   
+                        <b>Image segmentation</b> is used in medical imaging for tumour detection and <b>edge detection</b> for tracing blood capillaries and roadside kerbs for autonomous driving. Here, we try to accelerate the algorithms using <b>CUDA</b>, leveraging GPU and hybrid <b>OpenMP+MPI</b> approaches, leveraging multicores. We demonstrate optimizations like <b>SIMD, loop unrolling, use of templates, forced inlining</b> along with use of <b>shared</b> and <b>unified</b> memory, while exposing need for constructs like <i>atomic/critical</i> sections and <i>thread synchronization/barriers</i> through the implementation of <i>Sobel & Canny edge-detectors</i> and the <i>Fuzzy C-Means</i> algorithm for segmentation. Our work focuses on using <b>CUDA streams, dynamic parallelism<b> and <b>thrust</b> library along with <b>OMP Tasks</b> primitive to achieve high speedup  
                           <br><br>
-                          <!-- <a href="data/736.pdf">Brief Report</a> | <a href="data/fuzz_poster.tif">Poster</a> -->
+                          <a href="https://drive.google.com/file/d/1qNkpUeztE4vykUrtDshOnO_QRMdvg6o2/view?usp=sharing">Project Report</a> | <a href="https://github.com/theUltraMarine19/759-project">Github repo</a>
                         </p>
                       </td>
                     </tr>
