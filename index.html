@@ -108,7 +108,7 @@
                   <name>Arijit Pramanik</name> <br><br> </p>
     </div>
                   </font>
-                <p style="text-align:justify"></a>I am a first year graduate student in the <a href="https://www.cs.wisc.edu/">Department of Computer Sciences</a> at <a href="https://www.wisc.edu/">University of Wisconsin-Madison (UW-Madison)</a>, where I work on <b>Networked Systems</b> and <b>Machine Learning</b> (for Systems). I'm currently working under Prof. <a href="http://pages.cs.wisc.edu/~remzi/">Remzi</a> and <a href="http://pages.cs.wisc.edu/~dusseau/"> Andrea Arpaci-Dusseau</a>. 
+                <p style="text-align:justify"></a>I am a second year graduate student in the <a href="https://www.cs.wisc.edu/">Department of Computer Sciences</a> at <a href="https://www.wisc.edu/">University of Wisconsin-Madison (UW-Madison)</a>, where I work on <b>Networked Systems</b> and <b>Machine Learning</b> (for Systems). I'm currently working under Prof. <a href="http://pages.cs.wisc.edu/~remzi/">Remzi</a> and <a href="http://pages.cs.wisc.edu/~dusseau/"> Andrea Arpaci-Dusseau</a>. 
                     <br><br>
                     Prior to that, I spent four amazing years at <a href="https://www.iitb.ac.in/">Indian Institute of Technology Bombay </a> <a href="https://www.iitb.ac.in/"> (IIT Bombay)</a> with a <b>B.Tech (Hons)</b> in <a href="https://www.cse.iitb.ac.in/">Computer Science and Engineering (CSE)</a> and a <b>minor</b> in <a href="http://www.math.iitb.ac.in/">Applied Statistics and Informatics</a>. I was a recipient of the <b>Institute Academic Excellence Award</b> for securing <b>Dept. Rank 1</b> in <a href="images/insti_acad_prize.jpg">2017-18</a>. I also spent a wonderful semester on exchange at the <a href="http://nus.edu.sg/">National University of Singapore (NUS)</a> in the <a href="http://comp.nus.edu.sg/">School of Computing</a>. 
             <br><br>
@@ -132,7 +132,7 @@
             
 <!-- UPDATES -->
 
-            <table width="100%" align="center" border="0" cellspacing="0" cellpadding="20">
+            <table width="100%" align="center" border="0" cellspacing="0" cellpadding="10">
                   <tr>
               <td>
                 <heading style="font-size:22px">Updates</heading>
@@ -140,7 +140,7 @@
                 </tr><tr>
         <td> <ul style="list-style-type:circle;">
         <li>[Jul 2020] Accepted Research Assistantship under Prof. <a href="https://scholar.google.com/citations?user=C1skWKgAAAAJ&hl=en">Remzi</a> and <a href="https://scholar.google.com/citations?user=8VkvOEEAAAAJ&hl=en">Andrea Arpaci-Dusseau</a> for Aug'20-May'21 </li>
-        <li>[Feb 2020] Incoming SDE Intern at <b>Amazon Web Services</b>(RDS Open Source), E. Palo Alto, CA for Summer'20 </li>
+        <li>[Feb 2020] Incoming SDE Intern at <b>Amazon Web Services</b> (RDS Open Source), E. Palo Alto, CA for Summer'20 </li>
         <li>[Jan 2020] Continuing with Teaching Assistantship at UW Madison for CS 559 (Computer Graphics) in Spring'20 </li>
         <li>[Aug 2019] Received Teaching Assistantship at UW Madison for CS 559 (Computer Graphics) in Fall'19 </li>
         <!-- <li>[Apr 2019] Declined admission acceptance offers from Cornell, UCSD and Georgia Tech</li> -->
@@ -153,7 +153,7 @@
       
       
 <!-- COMPETITIONS -->     
-           <table width="100%" align="center" border="0" cellspacing="0" cellpadding="20">
+           <!-- <table width="100%" align="center" border="0" cellspacing="0" cellpadding="20"> -->
       
        <!-- <tr>
               <td>
@@ -175,7 +175,98 @@
                         </a> </p>
                         </td>
                     </tr> -->
-          
+      	<table width="100%" align="center" border="0" cellspacing="0" cellpadding="20">
+	      <tr>
+	        <td>
+	          <heading style="font-size:22px">Summer Internships</heading>
+	        </td>
+	      </tr>
+
+          	<tr >
+                <td width="30%"><img id="img-pgp" src="images/AWS_intern.png" alt="project_img" width="160" style="border-style: none">
+                    </td>
+        
+                      <td valign="top" width="70%">
+                        <p><a href="https://aws.amazon.com/rds/">
+          <papertitle>AWS Relational Database Service</a>, Palo Alto, CA [May'20-August'20] </papertitle><br>
+                          <em>Manager: <a href="https://www.linkedin.com/in/jkshah">Jignesh Shah</a>, Engineering Leader - Amazon RDS for PostgreSQL</em> <br>
+
+                        <p style="text-align:justify"><b>Sandboxing of untrusted language procedures within RDS PostgreSQL</b>
+                        <br>
+                        The goal was to facilitate <i>sandboxed execution</i> of untrusted functions, stored procedures and subtransactions inside Docker & LXC containers. This was to prevent customer programs from <b>crashing the main database server instance</b> and <b>enforce finer access privileges</b> while maintaining <b>average transaction latency</b> at par with equivalent extensions running <i>locally</i> on PostgreSQL
+                        <br><br>
+                        <ul style="list-style-type:circle;">
+                        <li>Integrated an open-source extension <i>PL/Container</i> into <i>PostgreSQL 12 & 13</i> while exploring the use of <b>shared memory segments, grpc channels & Unix sockets</b> for communication between customer client and container backend<br>
+                        <li>Performed <i>extensive benchmarking</i> with different <b>container configurations</b> to identify bottlenecks like <i>usage of separate Docker containers for every customer session</i> leading to <b>frequent spawing</b> of containers
+                       	<li>Developed a new prototype leveraging a <i>single container across all customer sessions</i>, leading to a <b>63% reduction</b> in memory usage while scaling to <b>thousands</b> of customer connections
+                        <li>Added runtime support for <b>Go</b> language, and created 3 separate extensions out of PL/Container for each of <i>R</i>, <i>Python</i> and <i>Go</i> utlizing separate containers for <b>better isolation</b><br>
+                        <li>Received a <b><em>Full Time Offer</b></em> in recognition of the above work <br>
+                        </p>
+                      </td>
+                    </tr>
+
+                    <tr >
+                <td width="30%"><img id="img-pgp" src="images/UW.png" alt="project_img" width="160" style="border-style: none">
+                    </td>
+        
+                      <td valign="top" width="70%">
+                        <p><a href="https://www.cs.washington.edu/">
+          <papertitle>University of Washington</a>, Seattle, WA [May'19-August'19] </papertitle><br>
+                          <em>Supervisor: <a href="https://www.cs.washington.edu/people/faculty/arvind">Prof. Arvind Krishnamurthy</a></em> <br>
+
+                        <p style="text-align:justify"><b>Hardware Acceleration of Proxies</b><br>
+                        The aim was to decrease the latency incurred at the level of proxies running as host-based processes
+                        <br><br>
+                        <ul style="list-style-type:circle;">
+                        <li>Worked on <i>Layer 4</i> and <i>Layer 7</i> load balancing of different proxies like <b>Envoy, Nginx & HAproxy</b> to demarcate functionalities for host and SmartNIC offloading  <br>
+                        <li>Performed benchmarking experiments using <b>wrk2</b> to determine feasibility of <b>SSL certificate verification</b> offloading and scalability, with a detailed study of Envoy worker threads <br>
+                        </p>
+                      </td>
+                    </tr>
+
+              <tr >
+                <td width="30%"><img id="img-pgp" src="images/fairseq.gif" alt="project_img" width="160" style="border-style: none">
+                    </td>
+        
+                      <td valign="top" width="70%">
+                        <p><a href="https://research.adobe.com/">
+          <papertitle>Adobe Systems (Research)</a>, Bengaluru [May'18-July'18] </papertitle><br>
+                          <em>Supervisor: <a href="https://research.adobe.com/person/balaji-vasan-srinivasan/">Dr. Balaji Vasan Srinivasan</a>, Senior Research Scientist, BigData Experience Labs</em> <br>
+
+                        <p style="text-align:justify"><b>Characteristics-Tailored Summary Generation</b><br>
+                        Unlike typical <i>abstractive text summarisation</i>, the aim was to tune summaries to characteristics like being more formal as required by news agencies or focus on certain financial aspects as desired by corporate organisations
+                        <br><br>
+                        <ul style="list-style-type:circle;">
+                        <li>Adapted <b>Facebook AI Research's Convolutional seq2seq model</b> for translation to characteristic-driven text generation with <b>modified attention weights</b> to focus on specific input embeddings for topic-tuned summaries <br>
+                        <li>Altered <b>beam search paradigm</b> for tweaking decoder state probability distributions, thus enhancing word-level features like descriptiveness with <b>token-based learning</b> for length based summarisation <br>
+                        <li>Incorporated a <b>Reinforcement Learning</b> term in loss function and achieved a <b>6.4% increase in ROUGE scores</b> <br>
+                        <li>Implemented the above insights on <i>pointer-generator framework</i> and submitted a <b>patent application (P8322-US)</b> for the same at <i>United States Patent and Trademark Office</i>
+                        <li>Received a <b><em>Full Time Offer</b></em> in recognition of the above work <br>
+                        </p>
+                      </td>
+                    </tr>
+
+                    <tr >
+                <td width="30%"><img id="img-pgp" src="images/Philips.png" alt="project_img" width="160" style="border-style: none">
+                    </td>
+        
+                      <td valign="top" width="70%">
+                        <p><a href="https://www.philips.co.in/a-w/about-philips/philips-innovation-center.html">
+          <papertitle>Philips Innovation Campus</a>, Bengaluru [May'17-July'17] </papertitle><br>
+                          <em>Supervisor: <a href="https://www.linkedin.com/in/rajendra-singh-sisodia-9905a129/?originalSubdomain=in">Dr. Rajendra Sisodia</a>, Principal Scientist, Philips Research</em> <br>
+
+                        <p style="text-align:justify"><b>Domain-specific Customer Care Chatbot</b><br>
+                        Modern chatbots perform well in conversations comprising simple question-answer pairs. The aim was to develop a <b>semantic control algorithm</b> to track context switches to predict favourable next steps in the conversation
+                        <br><br>
+                        <ul style="list-style-type:circle;">
+                        <li>Designed a chatbot leveraging <b>word2vec, Latent Semantic Indexing and Latent Dirichlet Allocation</b> for topics relevant to user query with <b>tf-idf weighted word n-grams</b> for improving accuracy <br>
+                        <li>Incorporated <b>probabilistic finite automata</b> to model conversation state changes guided by sentiment scores <br>
+                        <li>Built an <b>emotion classifier SVM</b>, and ontologies for knowledge representation from RDF sources with <b>SPARQL</b> queries for fetching data <br>
+                        <!-- <li>Implemented the above insights on <i>pointer-generator framework</i> and submitted a <b>patent application (P8322-US)</b> for the same<br> -->
+                          <br><a href="data/Philips_Report.pdf">Brief Report</a>
+                        </p>
+                      </td>
+                    </tr>
           
             <tr>
               <td>
@@ -327,116 +418,6 @@
             </a> </p>
           </td>
         </tr>
-
-            
-      <table width="100%" align="center" border="0" cellspacing="0" cellpadding="20">
-              <tr>
-                <td>
-                  <heading style="font-size:22px">Internships</heading>
-                </td>
-              </tr>
-
-              <tr >
-                <td width="30%"><img id="img-pgp" src="images/UW.png" alt="project_img" width="160" style="border-style: none">
-                    </td>
-        
-                      <td valign="top" width="70%">
-                        <p><a href="https://www.cs.washington.edu/">
-          <papertitle>University of Washington</a>, Seattle [May'19-August'19] </papertitle><br>
-                          <em>Supervisor: <a href="https://www.cs.washington.edu/people/faculty/arvind">Prof. Arvind Krishnamurthy</a></em> <br>
-
-                        <p style="text-align:justify"><b>Hardware Acceleration of Proxies</b>
-                        <br><br>
-                        <ul style="list-style-type:circle;">
-                        <li>The aim was to decrease the latency incurred at the level of proxies which mostly run as host-based processes<br>
-                        <li>Worked on <i>Layer 4</i> and <i>Layer 7</i> load balancing of different proxies like <b>Envoy, Nginx & HAproxy</b> to demarcate functionalities for host and SmartNIC offloading  <br>
-                        <li>Performed benchmarking experiments using <b>wrk2</b> to determine feasibility of <b>SSL certificate verification</b> offloading and scalability, with a detailed study of Envoy worker threads <br>
-                        </p>
-                      </td>
-                    </tr>
-
-              <tr >
-                <td width="30%"><img id="img-pgp" src="images/fairseq.gif" alt="project_img" width="160" style="border-style: none">
-                    </td>
-        
-                      <td valign="top" width="70%">
-                        <p><a href="https://research.adobe.com/">
-          <papertitle>Adobe Systems (Research)</a>, Bengaluru [May'18-July'18] </papertitle><br>
-                          <em>Supervisor: <a href="https://research.adobe.com/person/balaji-vasan-srinivasan/">Dr. Balaji Vasan Srinivasan</a>, Senior Research Scientist, BigData Experience Labs</em> <br>
-
-                        <p style="text-align:justify"><b>Characteristics-Tailored Summary Generation</b>
-                        <br><br>
-                        <ul style="list-style-type:circle;">
-                        <li>Unlike typical <i>abstractive text summarisation</i>, the aim was to tune our summaries to characteristics like being more formal as required by news agencies or focus on financial aspects as desired by corporate organisations<br>
-                        <li>Adapted <b>Facebook AI Research's Convolutional seq2seq model</b> for translation to characteristic-driven text generation with <b>modified attention weights</b> to focus on specific input embeddings for topic-tuned summaries <br>
-                        <li>Altered <b>beam search paradigm</b> for tweaking decoder state probability distributions, thus enhancing word-level features like descriptiveness with <b>token-based learning</b> for length based summarisation <br>
-                        <li>Incorporated a <b>Reinforcement Learning</b> term in loss function and achieved a <b>6.4% increase in ROUGE scores</b> <br>
-                        <li>Implemented the above insights on <i>pointer-generator framework</i> and submitted a <b>patent application (P8322-US)</b> for the same at <i>United States Patent and Trademark Office</i>, resulting in a <b><em>Full Time Offer</b></em> from Adobe <br>
-                        </p>
-                      </td>
-                    </tr>
-
-                    <tr >
-                <td width="30%"><img id="img-pgp" src="images/getfocus.jfif" alt="project_img" width="160" style="border-style: none">
-                    </td>
-        
-                      <td valign="top" width="70%">
-                        <p><a href="hhttps://www.linkedin.com/company/retailnav/about/">
-          <papertitle>Focus Analytics</a>, Mumbai [Nov'17-Dec'17] </papertitle><br>
-                          <em>Supervisor: <a href="https://www.linkedin.com/in/sudin-kadam-aa584825/?originalSubdomain=in">Sudin Kadam</a>, Head of Research</em> <br>
-
-                        <p style="text-align:justify"><b>Contextual Marketing for Retail Analytics</b>
-                        <br><br>
-                        <ul style="list-style-type:circle;">
-                        <li>Leveraged <b>topic-modeling</b> and <b>word2vec similarity scores</b> for customer segmentation and retail-affinity estimation using <i>gensim</i> and <i>SpaCy</i><br>
-                        <li>Implemented a <b>probabilistic graphical model</b> based recommendation engine, contributing to pgmpy github repo <br>
-                        <li>Created a new query language with <i>pyparsing</i> for internal database system on neo4j, utilizing <b>EBNF grammar</b> rules  <br>
-                        <br><a href="data/Winter_Internship.pdf">Brief Report</a> 
-                        </p>
-                      </td>
-                    </tr>
-
-                    <tr >
-                <td width="30%"><img id="img-pgp" src="images/Philips.png" alt="project_img" width="160" style="border-style: none">
-                    </td>
-        
-                      <td valign="top" width="70%">
-                        <p><a href="https://www.philips.co.in/a-w/about-philips/philips-innovation-center.html">
-          <papertitle>Philips Innovation Campus</a>, Bengaluru [May'17-July'17] </papertitle><br>
-                          <em>Supervisor: <a href="https://www.linkedin.com/in/rajendra-singh-sisodia-9905a129/?originalSubdomain=in">Dr. Rajendra Sisodia</a>, Principal Scientist, Philips Research</em> <br>
-
-                        <p style="text-align:justify"><b>Domain-specific Customer Care Chatbot</b>
-                        <br><br>
-                        <ul style="list-style-type:circle;">
-                        <li>Modern chatbots perform well in conversations comprising simple question-answer pairs. The aim was to develop a <b>semantic control algorithm</b> to track context switches to predict favourable next steps in the conversation<br>
-                        <li>Designed a chatbot leveraging <b>word2vec, Latent Semantic Indexing and Latent Dirichlet Allocation</b> for topics relevant to user query with <b>tf-idf weighted word n-grams</b> for improving accuracy <br>
-                        <li>Incorporated <b>probabilistic finite automata</b> to model conversation state changes guided by sentiment scores <br>
-                        <li>Built an <b>emotion classifier SVM</b>, and ontologies for knowledge representation from RDF sources with <b>SPARQL</b> queries for fetching data <br>
-                        <!-- <li>Implemented the above insights on <i>pointer-generator framework</i> and submitted a <b>patent application (P8322-US)</b> for the same<br> -->
-                          <br><a href="data/Philips_Report.pdf">Brief Report</a>
-                        </p>
-                      </td>
-                    </tr>
-
-              <tr >
-                <td width="30%"><img id="img-pgp" src="images/timetable.jfif" alt="project_img" width="160" style="border-style: none">
-                    </td>
-        
-                      <td valign="top" width="70%">
-                        <p><a href="https://www.linkedin.com/company/olivesync-private-limited/about/">
-          <papertitle>OliveSync, Zone Startups India</a>, Mumbai [Dec'16] </papertitle><br>
-                          <em>Supervisor: <a href="https://www.linkedin.com/in/ketanghatode/">Ketan Ghatode</a>, CTO, OliveSync Pvt. Ltd.</em> <br>
-
-                        <p style="text-align:justify"><b>Automated Timetable Generation</b>
-                        <br><br>
-                        <ul style="list-style-type:circle;">
-                        <li>Designed a scheduling algorithm leveraging <b>genetic algorithms</b> to generate the best fit optimal timetable for institutions <br>
-                        <li>Added live sync to <b>MySQL database</b> on <i>PHP</i> to track occurrence of classes, and course adjustments <br>
-                        <li>Employed <b>Gale-Shapley algorithm</b> for alloting time slot priorities to students and professors <br>
-                          <br><a href="data/OliveSync.pdf">Brief Report</a>
-                        </p>
-                      </td>
-                    </tr>
 
 
       <table width="100%" align="center" border="0" cellspacing="0" cellpadding="20">
@@ -663,10 +644,9 @@
               </tr>
               <tr>
         <td> <ul style="list-style-type:circle;">
-        <!-- <li>[Dec 2019] Got Research Assistantship at University of Wisconsin-Madison for Spring'20 under <a href="https://scholar.google.com/citations?user=d32BmwcAAAAJ&hl=en">Dr. Vikas Singh </a></li> -->
-        <li><b>AI/ML</b>: Computer Vision, Advanced & Digital Image Processing, Foundations of Machine Learning, Machine Learning(<i>Graduate Level</i>), Artificial Intelligence, Information Retrieval, Optimization </li>
+        <li><b>Systems</b>: Advanced & Intro to Operating Systems, Advanced & Intro to Computer Networks, Big Data Systems, High Performance Computing, Intro to Information Security, Computer Architecture, Implementation of Programming Languages, Databases and Information Systems </li>
         <br>
-        <li><b>Systems</b>: Advanced & Intro to Operating Systems, Advanced & Intro to Computer Networks, Computer Architecture, High Performance Computing, Implementation of Programming Languages, Databases and Information Systems </li>
+        <li><b>AI/ML</b>: Computer Vision, Advanced & Digital Image Processing, Foundations of Machine Learning, Machine Learning (<i>Graduate Level</i>), Artificial Intelligence, Information Retrieval, Optimization </li>
         <br>
         <li><b>Statistics & Maths</b>: Regression Analysis, Statistical Inference, Probability Theory, Derivative Pricing, Numerical Analysis, Data Analysis and Interpretation, Linear Algebra, Differential Equations, Calculus</li>
         <br>
@@ -677,6 +657,53 @@
                 </td> 
               
       </tr>
+
+      <table width="100%" align="center" border="0" cellspacing="0" cellpadding="20">
+	      <tr>
+	        <td>
+	          <heading style="font-size:22px">Winter Internships</heading>
+	        </td>
+	      </tr>
+
+                    <tr >
+                <td width="30%"><img id="img-pgp" src="images/getfocus.jfif" alt="project_img" width="160" style="border-style: none">
+                    </td>
+        
+                      <td valign="top" width="70%">
+                        <p><a href="hhttps://www.linkedin.com/company/retailnav/about/">
+          <papertitle>Focus Analytics</a>, Mumbai [Nov'17-Dec'17] </papertitle><br>
+                          <em>Supervisor: <a href="https://www.linkedin.com/in/sudin-kadam-aa584825/?originalSubdomain=in">Sudin Kadam</a>, Head of Research</em> <br>
+
+                        <p style="text-align:justify"><b>Contextual Marketing for Retail Analytics</b>
+                        <br><br>
+                        <ul style="list-style-type:circle;">
+                        <li>Leveraged <b>topic-modeling</b> and <b>word2vec similarity scores</b> for customer segmentation and retail-affinity estimation using <i>gensim</i> and <i>SpaCy</i><br>
+                        <li>Implemented a <b>probabilistic graphical model</b> based recommendation engine, contributing to pgmpy github repo <br>
+                        <li>Created a new query language with <i>pyparsing</i> for internal database system on neo4j, utilizing <b>EBNF grammar</b> rules  <br>
+                        <br><a href="data/Winter_Internship.pdf">Brief Report</a> 
+                        </p>
+                      </td>
+                    </tr>
+
+              <tr >
+                <td width="30%"><img id="img-pgp" src="images/timetable.jfif" alt="project_img" width="160" style="border-style: none">
+                    </td>
+        
+                      <td valign="top" width="70%">
+                        <p><a href="https://www.linkedin.com/company/olivesync-private-limited/about/">
+          <papertitle>OliveSync, Zone Startups India</a>, Mumbai [Dec'16] </papertitle><br>
+                          <em>Supervisor: <a href="https://www.linkedin.com/in/ketanghatode/">Ketan Ghatode</a>, CTO, OliveSync Pvt. Ltd.</em> <br>
+
+                        <p style="text-align:justify"><b>Automated Timetable Generation</b>
+                        <br><br>
+                        <ul style="list-style-type:circle;">
+                        <li>Designed a scheduling algorithm leveraging <b>genetic algorithms</b> to generate the best fit optimal timetable for institutions <br>
+                        <li>Added live sync to <b>MySQL database</b> on <i>PHP</i> to track occurrence of classes, and course adjustments <br>
+                        <li>Employed <b>Gale-Shapley algorithm</b> for alloting time slot priorities to students and professors <br>
+                          <br><a href="data/OliveSync.pdf">Brief Report</a>
+                        </p>
+                      </td>
+                    </tr>
 
 
 
