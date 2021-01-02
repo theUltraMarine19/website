@@ -112,7 +112,7 @@
                     <br><br>
                     Prior to that, I spent four amazing years at <a href="https://www.iitb.ac.in/">Indian Institute of Technology Bombay </a> <a href="https://www.iitb.ac.in/"> (IIT Bombay)</a> with a <b>B.Tech (Hons)</b> in <a href="https://www.cse.iitb.ac.in/">Computer Science and Engineering (CSE)</a> and a <b>minor</b> in <a href="http://www.math.iitb.ac.in/">Applied Statistics and Informatics</a>. I was a recipient of the <b>Institute Academic Excellence Award</b> for securing <b>Dept. Rank 1</b> in <a href="images/insti_acad_prize.jpg">2017-18</a>. I also spent a wonderful semester on exchange at the <a href="http://nus.edu.sg/">National University of Singapore (NUS)</a> in the <a href="http://comp.nus.edu.sg/">School of Computing</a>. 
             <br><br>
-                    I'm also a national level swimmer and won 4 gold, 5 silver and 11 bronze medals across 4 years at the <a href="https://interiit.com/">Inter-IIT Aquatics Meet</a> for which I was awarded the <b>Institute Sports Color</b> in <a href="images/insti_sports_color.png">2016</a> and <b>Hostel Color</b> in <a href="images/Hostel_Color.jpg">2017</a>. I led my <a href="https://www.facebook.com/IITBAquatics/">team</a> in 2018-19 and was awarded the <b>Institute Sports Citation</b> in <a href="images/citation.jpg">2019</a> for being the best outgoing swimmer.
+                    I'm also a national level swimmer and won 4 gold, 5 silver and 11 bronze medals across 4 years at the <a href="https://en.wikipedia.org/wiki/Inter_IIT_Sports_Meet">Inter-IIT Aquatics Meet</a> for which I was awarded the <b>Institute Sports Color</b> in <a href="images/insti_sports_color.png">2016</a> and <b>Hostel Color</b> in <a href="images/Hostel_Color.jpg">2017</a>. I led my <a href="https://www.facebook.com/IITBAquatics/">team</a> in 2018-19 and was awarded the <b>Institute Sports Citation</b> in <a href="images/citation.jpg">2019</a> for being the best outgoing swimmer.
                     <br><br> </p>
                 <p align=center>
 <a href="mailto:apramanik3@wisc.edu">Email</a> &nbsp/&nbsp
@@ -428,6 +428,46 @@
               </tr>
 
               <tr >
+                <td width="30%"><img id="img-pgp" src="images/DBMS.png" alt="project_img" width="160" style="border-style: none">
+                    </td>
+        
+                      <td valign="top" width="70%">
+                        <p>
+          <papertitle>Data-driven optimizations for Log-structured Merge Trees</papertitle><br>
+                          <em>Supervisor: <a href="http://pages.cs.wisc.edu/~yxy/">Prof. Xiangyao Yu</a>, University of Wisconsin-Madison</em> <br>
+
+                        <p style="text-align:justify">
+                          <!-- Advanced Operating Systems -->
+                        <!-- <br><br> -->
+                        <!-- <ul style="list-style-type:circle;"> -->
+                        	Modern database systems leverage <b>key-value stores</b> based on Log-Structured Merge (LSM) trees for storing metadata requiring fast lookups and updates. However, recent studies show that <i>application throughput can be compromised</i> by internal LSM tree operations that periodically write data to disk. The existing background work scheduler on Google's <a href="https://github.com/google/leveldb">LevelDB</a> was improvised for better application performance. Runtime parameters like <b>memtable and SSTable sizes</b>, <b>triggers for compaction and stalling writes</b> were auto-tuned using a <b>Bayesian Optimizer</b>, <a href="https://github.com/microsoft/MLOS">MLOS</a> to adapt to various workloads. The <b>foreground writes</b> were decoupled from <b>background memtable flushes</b> and <b>compactions</b> and showed <b>2.24-2.34X</b> improvement for industrial <i>write bursty</i> workloads in terms of observed client write throughput by scheduling these background operations during <b>idle periods</b> or when there were <b>very few or no writes</b> to the database
+                          <br><br>
+                          <a href="data/CS764_Report.pdf">Project Report</a> | <a href="https://docs.google.com/presentation/d/1nhM4epY47gGStoIJXVNFYnY81AQtDyuRCL7Atb3cmP4/edit?usp=sharing">Slides</a>
+                        </p>
+                      </td>
+                    </tr>
+
+               <tr >
+                <td width="30%"><img id="img-pgp" src="images/decen.png" alt="project_img" width="160" style="border-style: none">
+                    </td>
+        
+                      <td valign="top" width="70%">
+                        <p>
+          <papertitle>Comparing Centralized & Decentralized Stochastic Optimization Algorithms</papertitle><br>
+                          <em>Supervisor: <a href="https://shivaram.org/">Prof. Shivaram Venkataraman</a>, University of Wisconsin-Madison</em> <br>
+
+                        <p style="text-align:justify">
+                          <!-- Advanced Operating Systems -->
+                        <!-- <br><br> -->
+                        <!-- <ul style="list-style-type:circle;"> -->
+                        	<b>Federated learning</b> entails training statistical models directly over numerous <i>remote devices</i> using their <i>local data</i>. Increase in <i>storage</i> and <i>computation</i> capabilities of these devices coupled with <b>security</b> and <b>data-privacy</b> concerns has pushed computation to the <b>edge</b> in contrast to <i>classic ML training</i> over <b>centralized</b> servers within datacenters. We compare centralized approaches like <a href="https://www.cs.cmu.edu/~muli/file/ps.pdf">Parameter Server</a>, <a href="https://arxiv.org/pdf/1412.6651.pdf">Elastic Averaging SGD</a> with variants of <a href="https://arxiv.org/pdf/1705.09056.pdf">Decentralized-PSGD</a>. <i>Biased</i> and <i>unbiased</i> gradient compression operators like <b>top-K</b>, <b>random-K</b>, <b>quantization</b> via <a href="https://arxiv.org/pdf/1803.06443.pdf">ECD-PSGD</a>, <a href="https://arxiv.org/pdf/1803.06443.pdf">DCD-PSGD</a> and <a href="https://arxiv.org/pdf/1902.00340.pdf">ChocoSGD</a> are explored, with <b>communication-computation overlap</b> via <a href="https://arxiv.org/pdf/1710.06952.pdf">Asynchronous D-PSGD</a> to reduce idle time with <i>bounded stale gradients</i>. Training error & loss are observed over time across epochs and <i>transmitted bits</i> for topologies like <b>torus</b>, <b>ring</b>, etc with <a href="">Stochastic Gradient Push (SGP)</a> for <b>directed</b> graphs. Decentralized SGD algorithms with compressed communication are <b>on par in convergence guarantees</b> with their centralized counterparts
+                          <br><br>
+                          <a href="data/CS744_Final_Report_Group5.pdf">Project Report</a> | <a href="https://docs.google.com/presentation/d/1qiY8AdSxIJHq2-r4IJ7LS8u3k1GSirpA013wKnJZbhM/edit?usp=sharing">Slides</a> | <a href="https://github.com/theUltraMarine19/ChocoSGD">Github repo</a>
+                        </p>
+                      </td>
+                    </tr>
+
+              <tr >
                 <td width="30%"><img id="img-pgp" src="images/CMS.png" alt="project_img" width="160" style="border-style: none">
                     </td>
         
@@ -440,7 +480,7 @@
                           <!-- Advanced Operating Systems -->
                         <!-- <br><br> -->
                         <!-- <ul style="list-style-type:circle;"> -->
-                        Recent <b>active queue length management</b> algorithms like RED, ECN, CoDel probe queue length to throttle sending rate across all senders. However, they do not aim to identify <i>contributing flows</i> as the root cause of queue build-up. Here, I explored <b>Count-Min Sketches</b> which overcome <i>scalability issues of per-flow counters</i> and <i>dynamic allocation issues of hashmaps</i> to accurately record per-flow queue occupancy. Distributed across <b>snapshots</b> comprising a fixed number of packets (alternately, of specified time intervals), each snapshot utilizes a count-min sketch based on <b>register arrays in P4</b> to track flows in that interval, while cleverly reusing them after a certain total packet count. I tested my implementation on <i>mininet</i> with <b>ECN-based feedback notifications</b> to senders, thus utilizing <b>Flow Completion time</b> as a metric to demonstrate the effectiveness of this approach. I also used a C++ simulator with Pcapplusplus on <a href="http://pages.cs.wisc.edu/~tbenson/IMC10_Data.html">UW Data Center Measurement Trace</a> to evaluate <b>Precison</b> and <b>Recall</b> of the "contributing flow" classifier
+                        Recent <b>active queue length management</b> algorithms like RED, ECN, CoDel probe queue length to throttle sending rate across all senders. However, they do not aim to identify <i>contributing flows</i> as the root cause of queue build-up. Here, I explored <b>Count-Min Sketches</b> which overcome <i>scalability issues of per-flow counters</i> and <i>dynamic allocation issues of hashmaps</i> to accurately record per-flow queue occupancy. Distributed across <b>snapshots</b> comprising a fixed number of packets (alternately, of specified time intervals), each snapshot utilizes a count-min sketch based on <b>register arrays in P4</b> to track flows in that interval, while cleverly reusing them after a certain total packet count. I tested my implementation on <i>mininet</i> with <b>ECN-based feedback notifications</b> to senders, thus utilizing <b>Flow Completion time</b> as a metric to demonstrate the effectiveness of this approach. I also used a C++ simulator with Pcapplusplus on <a href="http://pages.cs.wisc.edu/~tbenson/IMC10_Data.html">UW Data Center Measurement Trace</a> to evaluate <b>Precision</b> and <b>Recall</b> of the "contributing flow" classifier
                           <br><br>
                           <a href="https://docs.google.com/document/d/1svl-XMEKbTolR0tbsrUSCrwvTanNf9sUq4Cwbn03bjc/edit?usp=sharing">Project Report</a> | <a href="https://github.com/theUltraMarine19/p4aqm">Github repo</a>
                         </p>
@@ -644,13 +684,13 @@
               </tr>
               <tr>
         <td> <ul style="list-style-type:circle;">
-        <li><b>Systems</b>: Advanced & Intro to Operating Systems, Advanced & Intro to Computer Networks, Big Data Systems, High Performance Computing, Intro to Information Security, Computer Architecture, Implementation of Programming Languages, Databases and Information Systems </li>
+        <li><b>Systems</b>: Adv & Intro to Operating Systems, Adv & Intro to Computer Networks, Adv & Intro to Databases, Big Data Systems, Machine Learning-Optimized Systems, High Performance Computing, Intro to Information Security, Computer Architecture, Implementation of Programming Languages </li>
         <br>
         <li><b>AI/ML</b>: Computer Vision, Advanced & Digital Image Processing, Foundations of Machine Learning, Machine Learning (<i>Graduate Level</i>), Artificial Intelligence, Information Retrieval, Optimization </li>
         <br>
         <li><b>Statistics & Maths</b>: Regression Analysis, Statistical Inference, Probability Theory, Derivative Pricing, Numerical Analysis, Data Analysis and Interpretation, Linear Algebra, Differential Equations, Calculus</li>
         <br>
-        <li><b>Theory</b>: Automata Theory, Logic in Computer Science, Discrete Structures, Design and Analysis of Algorithms, Data Structures & Algorithms, Abstractions and Paradigms for Programming</li>
+        <li><b>Theory</b>: Cryptography, Automata Theory, Logic in Computer Science, Discrete Structures, Design and Analysis of Algorithms, Data Structures & Algorithms, Abstractions and Paradigms for Programming</li>
         <br>
         <li><b>Others</b>: Computer Graphics, Software Systems, Digital Logic Design, Computer Programming and Utilization, Electrical and Electronic Circuits, Quantum Physics and its Applications, Economics </li>
         </ul>
