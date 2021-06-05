@@ -196,11 +196,11 @@
                         The goal was to facilitate <i>sandboxed execution</i> of untrusted functions, stored procedures and subtransactions inside Docker & LXC containers. This was to prevent customer programs from <b>crashing the main database server instance</b> and <b>enforce finer access privileges</b> while maintaining <b>average transaction latency</b> at par with equivalent extensions running <i>locally</i> on PostgreSQL
                         <br><br>
                         <ul style="list-style-type:circle;">
-                        <li>Integrated an open-source extension <i>PL/Container</i> into <i>PostgreSQL 12 & 13</i> while exploring the use of <b>shared memory segments, grpc channels & Unix sockets</b> for communication between customer and container backend<br>
+                        <li>Integrated an open-source extension <i>PL/Container</i> into <i>PostgreSQL 12 & 13</i> using <b>shared memory segments, grpc channels & Unix sockets</b> for communication between customer and container backend<br>
                         <li>Performed <i>extensive benchmarking</i> with different container configurations to identify bottlenecks like <i>usage of separate Docker containers for every customer session</i> leading to <b>frequent spawning</b> of containers
                        	<li>Developed a new prototype leveraging a <i>single container across all customer sessions</i>, leading to a <b>63% reduction in memory usage</b> while scaling to <b>thousands</b> of customer connections
                         <li>Added runtime support for <b>Go</b> language, and created 3 separate extensions for each of <i>R</i>, <i>Python</i> and <i>Go</i> utilizing separate containers for <b>better isolation</b><br>
-                        <!-- <li>Received a <b><em>Full Time Offer</b></em> in recognition of the above work <br> -->
+                        <li>Received a <b><em>Full Time Offer</b></em> in recognition of the above work <br>
                         </p>
                       </td>
                     </tr>
@@ -218,7 +218,7 @@
                         The aim was to decrease the latency incurred at the level of proxies running as host-based processes
                         <br><br>
                         <ul style="list-style-type:circle;">
-                        <li>Worked on <i>Layer 4</i> and <i>Layer 7</i> load balancing of different proxies like <b>Envoy, Nginx & HAproxy</b> to demarcate functionalities for host and SmartNIC offloading  <br>
+                        <li>Worked on <i>Layer 4</i> and <i>Layer 7</i> load balancing of different proxies like <b>Envoy, Nginx & HAproxy</b> to demarcate functionalities for host and SmartNIC offloading <br>
                         <li>Performed benchmarking experiments using <b>wrk2</b> to determine feasibility of <b>SSL certificate verification</b> offloading and scalability, with a detailed study of Envoy worker threads <br>
                         </p>
                       </td>
@@ -237,7 +237,7 @@
                         Unlike typical <i>abstractive text summarisation</i>, the aim was to tune summaries to characteristics like being more formal as required by news agencies or focus on certain financial aspects as desired by corporate organisations
                         <br><br>
                         <ul style="list-style-type:circle;">
-                        <li>Adapted <b>Facebook AI Research's Convolutional seq2seq model</b> for translation to characteristic-driven text generation with <b>modified attention weights</b> to focus on specific input embeddings for topic-tuned summaries <br>
+                        <li>Adapted <b>Facebook AI Research's Convolutional seq2seq model</b> for translation to topic-tuned summary generation with <b>modified attention weights</b> to focus on specific input embeddings <br>
                         <li>Altered <b>beam search paradigm</b> for tweaking decoder state probability distributions, thus enhancing word-level features like descriptiveness with <b>token-based learning</b> for length based summarisation <br>
                         <li>Incorporated a <b>Reinforcement Learning</b> term in loss function and achieved a <b>6.4% increase in ROUGE scores</b> <br>
                         <li>Implemented the above insights on <i>pointer-generator framework</i> and submitted a <b>patent application (P8322-US)</b> for the same at <i>United States Patent and Trademark Office</i>
@@ -371,7 +371,7 @@
                     <p style="text-align:justify">The project aims at <i>replicating locally stored states</i> in the primary switch to the secondary switch in <b>real-time</b> to avoid loss of state information in case of failures. Locally stored states aid in packet processing at <b>line rate</b>  
                     <br><br>
                     <ul style="list-style-type:circle;">
-                    <li> Constructed a <i>synchronous</i> cum <i>asynchronous</i> <b>write-consistent</b> bmv2 model to store "hard" network states (which can't be recovered from flow statistics) on the switch with consistent migration across backup switches in the <b>data plane</b> <br>
+                    <li> Constructed a <i>synchronous</i> cum <i>asynchronous</i> <b>write-consistent</b> bmv2 model to store "hard" network states (which can't be recovered from flow statistics) on the switch with consistent migration across backup switches in the <b>data plane</b> without <i>control plane</i> intervention<br>
                     <li> Achieved faster flow switchover compared to <b>root controller-mediated</b> state updates (where the controller stores and syncs such states across all switches)<br>
                     <li> Proposed an <i>anannotation-based API</i> for a generalized fault-tolerant primitive to be incorporated in <b>p4c</b> <br>
                     <!-- <li> Various cinematic principles and video features is being exploited for robust scene intensity estimation. -->
@@ -411,7 +411,7 @@
             <br><br>
             <ul style="list-style-type:circle;">
             <li> Studied the <b>SPARSE-COUNT algorithm</b> and extended the same using <i>GMP & MPFR</i> libraries to support <i>arbitrarily large number of variables</i> and <i>multi-precision computations</i>
-            <li> Implemented the above in the <b>ApproxMC framework</b> which is another similar framework for model-counting, using <b>&theta;(logn) low-density parity constraints</b> with tolerance guarantees for results within a specified confidence interval <br>
+            <li> Implemented the above in <b>ApproxMC framework</b> which is a similar framework for model-counting, using <b>&theta;(logn) low-density parity constraints</b> with tolerance guarantees for results within a specified confidence interval <br>
             <li> Results were validated using the <b>IJCAI'16-CMV benchmarks</b> <br>
             <br><br>
             <a href="data/NUS_Report.pdf">Report</a>
@@ -657,46 +657,43 @@
                       </td>
                     </tr>
 
-            <table width="100%" align="center" border="0" cellspacing="0" cellpadding="10">
-              <tr>
-                <td>
-                  <heading style="font-size:22px">Teaching Assistantships</heading>
-                </td>
-              </tr>
-              <tr>
-        <td> <ul style="list-style-type:circle;">
-        <!-- <li>[Dec 2019] Got Research Assistantship at University of Wisconsin-Madison for Spring'20 under <a href="https://scholar.google.com/citations?user=d32BmwcAAAAJ&hl=en">Dr. Vikas Singh </a></li> -->
-        <li><b>CS 559 (Computer Graphics)</b> at UW-Madison under <a href="http://pages.cs.wisc.edu/~gleicher/">Prof. Michael Gleicher</a> [Spring '20] </li>
-        <li><b>CS 559 (Computer Graphics)</b> at UW-Madison under <a href="https://www.linkedin.com/in/florian-heimerl-222179145">Florian Heimerl</a> [Fall   '19] </li>
-        <li><b>CS 101 (Computer Programming and Utilization)</b> at IIT Bombay under <a href="https://www.cse.iitb.ac.in/~ganesh/">Prof. Ganesh Ramakrishnan</a> [Spring '19] </li>
-        <li><b>CS 341 (Computer Architecture)</b> at IIT Bombay under <a href="https://www.it.iitb.ac.in/~bernard/">Prof. Bernard Menezes</a> [Fall   '18]</li>
-        <li><b>BB 101 (Introduction to Biology)</b> at IIT Bombay under <a href="http://www.bio.iitb.ac.in/people/faculty/kunwar-ambarish">Prof. Ambarish Kunwar</a> [Spring '17] </li>
-        </ul>
-                </td> 
-              
-      </tr>
-
-      <table width="100%" align="center" border="0" cellspacing="0" cellpadding="10">
-              <tr>
+        <table width="100%" align="center" border="0" cellspacing="0" cellpadding="10">
+            <tr>
                 <td>
                   <heading style="font-size:22px">Relevant Coursework</heading>
                 </td>
-              </tr>
-              <tr>
-        <td> <ul style="list-style-type:circle;">
-        <li><b>Systems</b>: Adv & Intro to Operating Systems, Adv & Intro to Computer Networks, Adv & Intro to Databases, Big Data Systems, Machine Learning-Optimized Systems, High Performance Computing, Intro to Information Security, Computer Architecture, Implementation of Programming Languages </li>
-        <br>
-        <li><b>AI/ML</b>: Computer Vision, Advanced & Digital Image Processing, Foundations of Machine Learning, Machine Learning (<i>Graduate Level</i>), Artificial Intelligence, Information Retrieval, Optimization </li>
-        <br>
-        <li><b>Statistics & Maths</b>: Regression Analysis, Statistical Inference, Probability Theory, Derivative Pricing, Numerical Analysis, Data Analysis and Interpretation, Linear Algebra, Differential Equations, Calculus</li>
-        <br>
-        <li><b>Theory</b>: Cryptography, Automata Theory, Logic in Computer Science, Discrete Structures, Design and Analysis of Algorithms, Data Structures & Algorithms, Abstractions and Paradigms for Programming</li>
-        <br>
-        <li><b>Others</b>: Computer Graphics, Software Systems, Digital Logic Design, Computer Programming and Utilization, Electrical and Electronic Circuits, Quantum Physics and its Applications, Economics </li>
-        </ul>
-                </td> 
+            </tr>
+            <tr>
+		        <td> <ul style="list-style-type:circle;">
+		        	<li><b>Systems</b>: Adv & Intro to Operating Systems, Adv & Intro to Computer Networks, Adv & Intro to Databases, Big Data Systems, Machine Learning-Optimized Systems, High Performance Computing, Foundations of Data Management, Intro to Information Security, Computer Architecture, Implementation of Programming Languages </li>
+		        <br>
+		        	<li><b>AI/ML</b>: Computer Vision, Advanced & Digital Image Processing, Foundations of Machine Learning, Machine Learning (<i>Graduate Level</i>), Artificial Intelligence, Information Retrieval, Optimization </li>
+		        <br>
+		        	<li><b>Statistics & Maths</b>: Regression Analysis, Statistical Inference, Probability Theory, Derivative Pricing, Numerical Analysis, Data Analysis and Interpretation, Linear Algebra, Differential Equations, Calculus</li>
+		        <br>
+		        	<li><b>Theory</b>: Cryptography, Automata Theory, Logic in Computer Science, Discrete Structures, Design and Analysis of Algorithms, Data Structures & Algorithms, Abstractions and Paradigms for Programming</li>
+		        <br>
+		        	<li><b>Others</b>: Computer Graphics, Software Systems, Digital Logic Design, Computer Programming and Utilization, Electrical and Electronic Circuits, Quantum Physics and its Applications, Economics </li>
+		        </ul></td> 
+            </tr>
+
+         <table width="100%" align="center" border="0" cellspacing="0" cellpadding="10">
+            <tr>
+                <td>
+                  <heading style="font-size:22px">Teaching Assistantships</heading>
+                </td>
+            </tr>
+            <tr>
+        		<td> <ul style="list-style-type:circle;">
+        			<!-- <li>[Dec 2019] Got Research Assistantship at University of Wisconsin-Madison for Spring'20 under <a href="https://scholar.google.com/citations?user=d32BmwcAAAAJ&hl=en">Dr. Vikas Singh </a></li> -->
+        			<li><b>CS 559 (Computer Graphics)</b> at UW-Madison under <a href="http://pages.cs.wisc.edu/~gleicher/">Prof. Michael Gleicher</a> [Spring '20] </li>
+        			<li><b>CS 559 (Computer Graphics)</b> at UW-Madison under <a href="https://www.linkedin.com/in/florian-heimerl-222179145">Florian Heimerl</a> [Fall   '19] </li>
+        			<li><b>CS 101 (Computer Programming and Utilization)</b> at IIT Bombay under <a href="https://www.cse.iitb.ac.in/~ganesh/">Prof. Ganesh Ramakrishnan</a> [Spring '19] </li>
+        			<li><b>CS 341 (Computer Architecture)</b> at IIT Bombay under <a href="https://www.it.iitb.ac.in/~bernard/">Prof. Bernard Menezes</a> [Fall   '18]</li>
+        			<li><b>BB 101 (Introduction to Biology)</b> at IIT Bombay under <a href="http://www.bio.iitb.ac.in/people/faculty/kunwar-ambarish">Prof. Ambarish Kunwar</a> [Spring '17] </li>
+       			</ul></td> 
               
-      </tr>
+	 	    </tr>
 
       <table width="100%" align="center" border="0" cellspacing="0" cellpadding="20">
 	      <tr>
