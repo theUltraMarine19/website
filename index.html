@@ -103,23 +103,30 @@
           <table width="100%" align="center" border="0" cellspacing="0" cellpadding="20">
             <tr>
               <td width="67%" valign="middle">
-    <div id="top">
-                <p align="center">
-                  <name>Arijit Pramanik</name> <br><br> </p>
-    </div>
-                  </font>
-                <p style="text-align:justify"></a>I graduated with an MS in <a href="https://www.cs.wisc.edu/">Computer Sciences</a> from <a href="https://www.wisc.edu/">University of Wisconsin-Madison (UW-Madison)</a> in May 2021, where I worked on <b>Storage Systems</b> (Key-Value Stores) and <b>Machine Learning for Systems</b> under Prof. <a href="http://pages.cs.wisc.edu/~remzi/">Remzi</a> and <a href="http://pages.cs.wisc.edu/~dusseau/"> Andrea Arpaci-Dusseau</a>. 
+    			<div id="top">
+                	<p align="center">
+                	<name>Arijit Pramanik</name> <br><br> </p>
+    			</div></font>
+                
+                	<p style="text-align:justify"></a>I graduated with an MS in <a href="https://www.cs.wisc.edu/">Computer Sciences</a> from <a href="https://www.wisc.edu/">University of Wisconsin-Madison (UW-Madison)</a> in May 2021, where I worked on <b>Storage Systems</b> (Key-Value Stores) and <b>Machine Learning for Systems</b> under Prof. <a href="http://pages.cs.wisc.edu/~remzi/">Remzi</a> and <a href="http://pages.cs.wisc.edu/~dusseau/"> Andrea Arpaci-Dusseau</a>. 
+                    
                     <br><br>
+                    
                     Prior to that, I spent four amazing years (2015-19) at <a href="https://www.iitb.ac.in/">Indian Institute of Technology Bombay </a> <a href="https://www.iitb.ac.in/"> (IIT Bombay)</a> with a <b>B.Tech (Hons)</b> in <a href="https://www.cse.iitb.ac.in/">Computer Science and Engineering (CSE)</a> and a <b>minor</b> in <a href="http://www.math.iitb.ac.in/">Applied Statistics and Informatics</a>. I was a recipient of the <b>Institute Academic Excellence Award</b> for securing <b>Dept. Rank 1</b> in <a href="images/insti_acad_prize.jpg">2017-18</a>. I also spent a wonderful semester on exchange at the <a href="http://nus.edu.sg/">National University of Singapore (NUS)</a> in the <a href="http://comp.nus.edu.sg/">School of Computing</a>. 
-            <br><br>
+            		
+            		<br><br>
+                    
                     I'm also a national level swimmer and won 4 gold, 5 silver and 11 bronze medals across 4 years at the <a href="https://en.wikipedia.org/wiki/Inter_IIT_Sports_Meet">Inter-IIT Aquatics Meet</a> for which I was awarded the <b>Institute Sports Color</b> in <a href="images/insti_sports_color.png">2016</a> and <b>Hostel Color</b> in <a href="images/Hostel_Color.jpg">2017</a>. I led my <a href="https://www.facebook.com/IITBAquatics/">team</a> in 2018-19 and was awarded the <b>Institute Sports Citation</b> in <a href="images/citation.jpg">2019</a> for being the best outgoing swimmer. I'm an <a href="data/NTSE.pdf">NTSE 2013</a> and <a href="data/KVPY.pdf">KVPY 2013</a> scholar. 
+                    
                     <br><br> </p>
-                <p align=center>
-<a href="mailto:apramanik3@wisc.edu">Email</a> &nbsp/&nbsp
-<a href="data/Resume.pdf">Resume</a> &nbsp/&nbsp
-<a href="https://github.com/theUltraMarine19">Github</a> &nbsp/&nbsp
-<a href="https://www.linkedin.com/in/arijit-pramanik-11448347/">LinkedIn</a> &nbsp/&nbsp
-<a href="#bottom">Other links</a>
+                	
+                	<p align=center>
+					
+					<a href="mailto:apramanik3@wisc.edu">Email</a> &nbsp/&nbsp
+					<a href="data/Resume.pdf">Resume</a> &nbsp/&nbsp
+					<a href="https://github.com/theUltraMarine19">Github</a> &nbsp/&nbsp
+					<a href="https://www.linkedin.com/in/arijit-pramanik-11448347/">LinkedIn</a> &nbsp/&nbsp
+					<a href="#bottom">Other links</a>
 
 <!-- &nbsp/&nbsp <a href="files/TODO.pdf">Resume</a> -->
 
@@ -298,6 +305,28 @@
             </tr>
 
         <tr>
+           	<td width="30%"><img id="img-opt" src="images/CS784.png" alt="project_img" width="160" style="border-style: none">
+            </td>
+                  
+            <td valign="top" width="70%">
+                <p><a href="#">
+      			<papertitle>Learned strategies for Key-Value Stores</papertitle></a><br>
+                    <em>Supervisor: <a href="http://pages.cs.wisc.edu/~remzi/">Prof. Remzi</a> & <a href="http://pages.cs.wisc.edu/~dusseau/">Andrea Arpaci-Dusseau</a>, University of Wisconsin-Madison</em><br>
+                    <p style="text-align:justify"> Log-Structured Merge (LSM) based key-value stores have become so popular today that they are used as backend for <b>NewSQL database abstractions</b> like <a href="https://docs.pingcap.com/tidb/stable/tidb-architecture">TiDB</a>. They use <b>indexes</b> for faster data lookup whose <i>memory overhead</i> increases with database size leaving lesser memory for <i>caching data blocks</i>. We employ learned techniques to reduce this space overhead without compromising <i>read latencies</i>. We also explore learning approaches to schedule/prioritize compactions and devise new compaction policies
+                    <!-- detrimental for cloud environments with smaller memory to disk ratios -->
+                    <br><br>
+                    <ul style="list-style-type:circle;">
+                    <li> Block-based storage media like SSDs read in granularity of <b>data blocks</b>. Traditional indexes store the <b>last key</b> of each such block and perform <i>binary search</i> on these entries to fetch corresponding data block for lookup <br>
+                    <li> Employed <a href="https://arxiv.org/pdf/1712.01208.pdf">Learned Indexes</a> to train a model to learn <i>offsets</i> from <i>last keys</i> of data blocks inside SSTables when created during compactions to reduce lookup time from <b>O(logn)</b> to <b>O(1)</b> <br>
+                    <li> Obtained a <b>53% reduction</b> in indexing memory footprint over traditional indexes with <b>&#60;5% increase</b> in <i>point lookup</i> latency using both <b>Fuzzy</b> and <b>Greedy Piecewise Linear Regression</b> in RocksDB <br>
+                    <!-- <li> A near linear relationship is observed between compaction time taken, output data size and write amplification -->
+                    <li> <i>Range query</i> latencies show <b>11.4%</b> reduction by picking SSTables with <b>most user reads</b> at a level for compaction and minimizing seeks per read over default policy<br>
+                    <br> <br>
+                    <a href="https://docs.google.com/presentation/d/1F-PquqquYxQmCy-r464NvDXyOgjpGA5g_fff1qVGr1Y/edit?usp=sharing">Learned Compactions Slides</a> | <a href="https://docs.google.com/presentation/d/1GD-f4LR4njOwP7MC1BYEtFJtUEMT1srv54ZONKYj4CQ/edit?usp=sharing">Learned Indexes Slides</a> | <a href="data/RA_Report.pdf">Report</a></p>
+            </td>
+        </tr>
+
+        <tr>
            	<td width="30%"><img id="img-opt" src="images/D2R.png" alt="project_img" width="160" style="border-style: none">
             </td>
                   
@@ -432,7 +461,7 @@
                 <td valign="top" width="70%">
                     <p>
           			<papertitle>Data-driven optimizations for Log-structured Merge Trees</papertitle><br>
-                        <em>Supervisor: <a href="http://pages.cs.wisc.edu/~yxy/">Prof. Xiangyao Yu</a>, University of Wisconsin-Madison</em> <br>
+                        <em>Supervisor: <a href="http://pages.cs.wisc.edu/~yxy/">Prof. Xiangyao Yu</a> & <a href="http://pages.cs.wisc.edu/~paris/">Paris Koutris</a>, University of Wisconsin-Madison</em> <br>
 
                         <p style="text-align:justify">
                         	Modern database systems leverage <b>key-value stores</b> based on Log-Structured Merge (LSM) trees for storing metadata requiring fast lookups and updates. However, recent studies show that <i>application throughput can be compromised</i> by internal LSM tree operations that periodically write data to disk. The existing background work scheduler on Google's <a href="https://github.com/google/leveldb">LevelDB</a> was improvised for better application performance. Runtime parameters like <b>memtable and SSTable sizes</b>, <b>triggers for compaction and stalling writes</b> were auto-tuned using a <b>Bayesian Optimizer</b>, <a href="https://github.com/microsoft/MLOS">MLOS</a> to adapt to various workloads. The <b>foreground writes</b> were decoupled from <b>background memtable flushes</b> and <b>compactions</b> and showed <b>2.24-2.34X</b> improvement for industrial <i>write bursty</i> workloads in terms of observed client write throughput by scheduling these background operations during <b>idle periods</b> or when there were <b>very few or no writes</b> to the database
@@ -744,7 +773,7 @@
                         <em>Supervisor: <a href="https://www.linkedin.com/in/razvan-voicu-89061711/?originalSubdomain=sg">Prof. Razvan Voicu</a> & <a href="https://www.comp.nus.edu.sg/cs/bio/chinwn/">Prof. Chin Wei Ngan</a>, National University of Singapore</em> <br>
 
                         <p style="text-align:justify">
-                        	Designed an <b>abstract syntax tree</b> comprising unary and binary operations, conditionals, functions, recursive functions, applications and let constructs on various data types for the compiler, utilizing the <b>Gram parser</b> for parsing the instructions. Implemented a <b>virtual machine instruction interpreter</b> with an operand stack for control flow. Used the <i>type-checking</i> system with <b>Hindley Milner type inference</b> system with support for optional data types. The compiler was further optimized to leverage <b>tail recursion</b> and <i>contiguous stack frames</i> 
+                        	Designed an <b>abstract syntax tree</b> comprising unary and binary operations, conditionals, functions, recursive functions, applications and let constructs on various data types for the compiler, utilizing the <b>Gram parser</b> for parsing instructions. Implemented a <b>virtual machine instruction interpreter</b> with an operand stack for control flow. Performed <i>type-checking</i> using <b>Hindley Milner type inference</b> with support for optional data types. The compiler was further optimized to leverage <b>tail recursion</b> and <i>contiguous stack frames</i> 
                         </p>
                 </td>
         
