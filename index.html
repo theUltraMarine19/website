@@ -123,7 +123,7 @@
                 	<p align=center>
 					
 					<a href="mailto:apramanik3@wisc.edu">Email</a> &nbsp/&nbsp
-					<a href="data/Resume.pdf">Resume</a> &nbsp/&nbsp
+					<a href="data/Resume_Jun21.pdf">Resume</a> &nbsp/&nbsp
 					<a href="https://github.com/theUltraMarine19">Github</a> &nbsp/&nbsp
 					<a href="https://www.linkedin.com/in/arijit-pramanik-11448347/">LinkedIn</a> &nbsp/&nbsp
 					<a href="#bottom">Other links</a>
@@ -312,7 +312,7 @@
                 <p><a href="#">
       			<papertitle>Learned strategies for Key-Value Stores</papertitle></a><br>
                     <em>Supervisor: <a href="http://pages.cs.wisc.edu/~remzi/">Prof. Remzi</a> & <a href="http://pages.cs.wisc.edu/~dusseau/">Andrea Arpaci-Dusseau</a>, University of Wisconsin-Madison</em><br>
-                    <p style="text-align:justify"> Log-Structured Merge (LSM) based key-value stores have become so popular today that they are used as backend for <b>NewSQL database abstractions</b> like <a href="https://docs.pingcap.com/tidb/stable/tidb-architecture">TiDB</a>. They use <b>indexes</b> for faster data lookup whose <i>memory overhead</i> increases with database size leaving lesser memory for <i>caching data blocks</i>. We employ learned techniques to reduce this space overhead without compromising <i>read latencies</i>. We also explore learning approaches to schedule/prioritize compactions and devise new compaction policies
+                    <p style="text-align:justify"> Log-Structured Merge (LSM) based key-value stores have become so popular today that they are used as backend for <b>NewSQL database abstractions</b> like <a href="https://docs.pingcap.com/tidb/stable/tidb-architecture">TiDB</a>. They use <b>indexes</b> for faster data lookup whose <i>memory overhead</i> increases with database size leaving lesser memory for <i>caching data blocks</i>. We employ learned techniques to reduce this space overhead without compromising <i>read latencies</i>. We also explore learning approaches to prioritize compactions and devise new compaction policies
                     <!-- detrimental for cloud environments with smaller memory to disk ratios -->
                     <br><br>
                     <ul style="list-style-type:circle;">
@@ -320,8 +320,8 @@
                     <li> Employed <a href="https://arxiv.org/pdf/1712.01208.pdf">Learned Indexes</a> to train a model to learn <i>offsets</i> from <i>last keys</i> of data blocks inside SSTables when created during compactions to reduce lookup time from <b>O(logn)</b> to <b>O(1)</b> <br>
                     <li> Obtained a <b>53% reduction</b> in indexing memory footprint over traditional indexes with <b>&#60;5% increase</b> in <i>point lookup</i> latency using both <b>Fuzzy</b> and <b>Greedy Piecewise Linear Regression</b> in RocksDB <br>
                     <!-- <li> A near linear relationship is observed between compaction time taken, output data size and write amplification -->
-                    <li> <i>Range query</i> latencies show <b>11.4%</b> reduction by picking SSTables with <b>most user reads</b> at a level for compaction and minimizing seeks per read over default policy<br>
-                    <br> <br>
+                    <li> <i>Range query</i> latencies show <b>11.4%</b> reduction by picking SSTables with <b>most user reads</b> at a level for compaction thus minimizing seeks per read over default policy <br>
+                    <br>
                     <a href="https://docs.google.com/presentation/d/1F-PquqquYxQmCy-r464NvDXyOgjpGA5g_fff1qVGr1Y/edit?usp=sharing">Learned Compactions Slides</a> | <a href="https://docs.google.com/presentation/d/1GD-f4LR4njOwP7MC1BYEtFJtUEMT1srv54ZONKYj4CQ/edit?usp=sharing">Learned Indexes Slides</a> | <a href="data/RA_Report.pdf">Report</a></p>
             </td>
         </tr>
@@ -341,7 +341,7 @@
                     <li> Analysed performance relative to other <b>latency-aware</b> routing algorithms to establish <i>stretch</i> as a function of number of links <br>
                     <li> Provided support for <b>Weighted Cost Multipath</b> load balancing with dynamic weights on a <b>per-packet</b> basis <br>
                     <li> Added per-session, per-flow and per-packet consistency using <b>register-caching</b> of policies to avoid excessive recirculations <br>
-                    <br> <br>
+                    <br> 
                     <a href="https://docs.google.com/presentation/d/1fx_alWVxjKbx81C7iGbDTKdBNSzI5xvNDd2LNp4CRwE/edit?usp=sharing">Slide Deck 1</a> | <a href="https://docs.google.com/presentation/d/1njGyaDvc56D4fUe-NAFiIQL5oxN8_yew5lL2b8SsG9M/edit?usp=sharing">Slide Deck 2</a> | <a href="https://arxiv.org/pdf/1912.02402.pdf">D2R preprint</a></p>
             </td>
         </tr>
@@ -360,7 +360,7 @@
                     <li> Explored the use of <i>RL-based actor-critic algorithms</i> in designing traffic matrices to perform in-network load balancing to ensure <b>max-min fairness</b> and <b>minimal queuing</b> for Clos data-center networks <br>
                     <li> Implemented a <i>compressed neural network</i> version of the same on P4 switches with <b>weighted multi-path load balancing</b> <br>
                     <li> Harnessed <i>SmartNIC-compute</i> power to perform computation of weights at end-hosts to maintain line-rate processing at switches <br>
-                    <br> <br>
+                    <br>
                     <a href="https://docs.google.com/presentation/d/1jcZ3gCCg3zVnVxgHSwxWdkEk2LDRHEEOSP6ooMW3SFE/edit?usp=sharing">Slide Deck for P4 version</a> </p>
             </td>
         </tr>                  
@@ -379,7 +379,7 @@
                     <li> Constructed a <i>synchronous</i> cum <i>asynchronous</i> <b>write-consistent</b> bmv2 model to store "hard" network states (which can't be recovered from flow statistics) on the switch with consistent migration across backup switches in the <b>data plane</b> without <i>control plane</i> intervention<br>
                     <li> Achieved faster flow switchover compared to <b>root controller-mediated</b> state updates (where the controller stores and syncs such states across all switches)<br>
                     <li> Proposed an <i>annotation-based API</i> for a generalized fault-tolerant primitive to be incorporated in <b>p4c</b> <br>
-                    <br><br>
+                    <br>
                     <a href="data/RnD_report.pdf">Report</a> | <a href="https://docs.google.com/presentation/d/1FyARnYO8G3wsEG15HXjDqcyLmRzB42Y_6FfQJmhdlno/edit?usp=sharing">Presentation</a>
                     </a> </p>
             </td>
@@ -400,7 +400,7 @@
                     <li>Performed <b>inpainting</b> to enable compressed sensing of Raman spectral images, to speedup image acquisition <br>
                     <li>Extended the same to the <b>super-resolution</b> use case with significant improvements over simple <i>bicubic interpolation</i> <br>
                     <li>Achieved better results with <b>Gaussian Mixture Models</b> trained on a smaller representative set using the <b>Expectation-Maximization (EM)</b> algorithm<br>
-                    <br><br>
+                    <br>
                     <a href="data/BTP_Report.pdf">Report</a> | <a href="data/BTP.pdf">Presentation</a> | <a href="data/ICIP.pdf">ICIP 2019 Paper Draft</a>
                     </a> </p>
             </td>
@@ -420,7 +420,7 @@
 		            <li>Tested <b>latency, throughput, efficiency in terms of cycles per packet</b> with <i>increasing cores, routing table entries</i> and <i>hierarchical cache sizes</i> using uniform and skewed Gaussian traffic loads of 10 Gbps generated with DPDK-based packet generator <i>MoonGen</i>
 		            <li>Analyzed VPP's <b>batch packet processing paradigm</b> and tested batch size as a function of different parameters <br>
 		            <li>Studied <b>Cisco Express Forwarding</b> implemented using <i>multiway prefix trees</i> in VPP, patented by Cisco <br>
-		            <br><br>
+		            <br>
 		            <a href="data/VPP_report.pdf">Report</a> | <a href="https://docs.google.com/presentation/d/1aJsPMKIlfqZYp2giIGs06nlI6kKdTlFB9e2qlCObUsM/edit?usp=sharing">Presentation</a>
 		            </a> </p>
           	</td>
@@ -440,7 +440,7 @@
 		            <li> Studied the <b>SPARSE-COUNT algorithm</b> and extended the same using <i>GMP & MPFR</i> libraries to support <i>arbitrarily large number of variables</i> and <i>multi-precision computations</i>
 		            <li> Implemented the above in <b>ApproxMC framework</b> which is a similar framework for model-counting, using <b>&theta;(logn) low-density parity constraints</b> with tolerance guarantees for results within a specified confidence interval <br>
 		            <li> Results were validated using the <b>IJCAI'16-CMV benchmarks</b> <br>
-		            <br><br>
+		            <br>
 		            <a href="data/NUS_Report.pdf">Report</a>
 		            </a> </p>
           	</td>
